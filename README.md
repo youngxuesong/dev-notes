@@ -1,39 +1,63 @@
-# DevNotes — 个人技术与出海资产手记
+<div align="center">
 
-基于 **dumi 2 + React** 构建的高性能个人技术与跨境金融双语静态知识库。
+# 🌐 DevNotes
 
-## 🌟 核心板块
+**A Pragmatic Full-Stack Engineer's Digital Garden on AI Agents, System Architecture & Cross-Border Finance.**
 
-1. **🤖 AI & Agent (`/ai`)**：Coding Agent 实战（Claude Code / Cursor / Pi）与 Prompt Caching 优化技巧。
-2. **🛠️ 架构与系统工程 (`/engineering`)**：高可用网关设计、Failover 容灾路由、Caddy / Docker 部署实践。
-3. **💳 跨境金融与出海 (`/finance`)**：海外银行（OCBC、Wise）、独立开发者资金流转与美股指数投资。
-4. **⚡ 踩坑备忘录 TIL (`/til`)**：高频 Bug 速查、API 429 优雅重试、数据库性能优化备忘。
-5. **🚀 作品集 (`/projects`)**：个人开源与代表性项目展示。
-6. **👨‍💻 关于我与合规 (`/about`)**：关于作者背景、联系方式及 AdSense 必备的隐私政策（Privacy Policy）。
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
+[![Built with dumi](https://img.shields.io/badge/Built%20with-dumi%202-blue.svg)](https://d.umijs.org)
+[![Vercel Deployment](https://img.shields.io/badge/Deploy-Vercel-black.svg?logo=vercel)](https://vercel.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+</div>
 
 ---
 
-## 🚀 本地开发与构建
+## 📖 Overview
+
+**DevNotes** is a fast, lightweight, and bilingual static knowledge base built with **dumi 2 + React + TypeScript**. Designed for developers, indie hackers, and global tech nomads, it focuses on real-world engineering experiences validated by production systems and capital routing.
+
+### 🌟 Core Sections
+
+1. **🤖 AI Lab (`/ai`)**: Real-world practices with autonomous coding agents (Claude Code, Cursor, Pi), prompt engineering, and Prompt Caching cost optimization.
+2. **🛠️ System Engineering (`/engineering`)**: Resilient API gateway design, intelligent multi-account failover routing, and production DevOps with Caddy & Docker.
+3. **💳 Cross-Border Finance (`/finance`)**: First-hand offshore banking walkthroughs (HSBC, BOCHK, ZA Bank, Ant Bank Macau), multi-currency routing, and global investing.
+4. **👨‍💻 About & Showcase (`/about`)**: Author profile, open-source projects, and international legal compliance (Privacy Policy, Terms of Service).
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js >= 18.0.0
+- pnpm >= 8.0.0
+
+### Local Development
 
 ```bash
-# 1. 安装依赖
+# 1. Install dependencies
 pnpm install
 
-# 2. 本地开发调试
+# 2. Start local development server with hot reload
 pnpm dev
 
-# 3. 生产环境静态打包（生成 dist/ 目录）
+# 3. Build for production (outputs to dist/)
 pnpm build
 
-# 4. 本地预览构建产物
+# 4. Preview production build locally
 pnpm preview
 ```
 
 ---
 
-## 🌐 部署上线指南（海外服务器 + Caddy）
+## 🌐 Deployment
 
-将打包生成的 `dist/` 目录上传到海外服务器，在 Caddy 配置中添加以下反代规则即可：
+### Deploy to Vercel (Recommended)
+This repository includes a pre-configured `vercel.json`. Simply import your repository into [Vercel](https://vercel.com) and click **Deploy**.
+
+### Deploy to Overseas Server (Caddy / Nginx)
+Serve the generated `dist/` folder directly via Caddy:
 
 ```caddy
 notes.yourdomain.com {
@@ -46,7 +70,14 @@ notes.yourdomain.com {
 
 ---
 
-## 💰 Google AdSense 配置提示
+## 💰 Google AdSense & Compliance
 
-1. 在 `public/ads.txt` 中填入你的真实 Google Publisher ID。
-2. 在 `.dumirc.ts` 的 `headScripts` 和 `src/components/GoogleAd.tsx` 中将 `ca-pub-0000000000000000` 替换为你的真实客户端 ID。
+- Update your publisher ID in `public/ads.txt`.
+- Configure your client ID in `.dumirc.ts` and `src/components/GoogleAd.tsx`.
+- Legal and Privacy Policy pages are built-in under `/about/privacy`.
+
+---
+
+## 📄 License
+
+MIT © [youngxuesong](https://github.com/youngxuesong)
