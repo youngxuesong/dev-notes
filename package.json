@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "A Full-Stack Developer's Notes on AI, Engineering & Cross-Border Finance",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "dumi dev",
     "build": "dumi build",
