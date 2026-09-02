@@ -1,6 +1,26 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
+  sitemap: {
+    hostname: 'https://kuyiduo.hidns.vip',
+  },
+  metas: [
+    {
+      name: 'keywords',
+      content: 'AI Agent, Claude Code, OpenAI Codex, CC Switch, LLM Gateway, 境外银行开户, 香港汇丰, 中银香港, 跨境金融, 全栈开发',
+    },
+    {
+      name: 'description',
+      content: 'DevNotes - 全栈开发者的数字花园，专注于 AI Agent 实战架构、Claude Code 与 Codex 工具链接入、高可用系统工程及港澳跨境金融出海指南。',
+    },
+    { property: 'og:site_name', content: 'DevNotes' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:title', content: 'DevNotes - AI Agent & System Engineering & Cross-Border Finance' },
+    {
+      property: 'og:description',
+      content: '全栈开发者的实战笔记：深入拆解 Claude Code、Agent 架构、LLM 网关与境外金融闭环。',
+    },
+  ],
   themeConfig: {
     name: 'DevNotes',
     logo: false,
