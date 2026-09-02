@@ -1,9 +1,6 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  sitemap: {
-    hostname: 'https://kuyiduo.hidns.vip',
-  },
   metas: [
     {
       name: 'keywords',
