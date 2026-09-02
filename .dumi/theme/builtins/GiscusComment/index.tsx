@@ -10,9 +10,9 @@ interface GiscusCommentProps {
 
 export const GiscusComment: React.FC<GiscusCommentProps> = ({
   repo = 'youngxuesong/dev-notes',
-  repoId = 'R_kgDON7xxxx', // 待替换为你的真实 repoId
+  repoId = 'R_kgDOUKesuQ',
   category = 'Announcements',
-  categoryId = 'DIC_kwDON7xxxx', // 待替换为你的真实 categoryId
+  categoryId = 'DIC_kwDOUKesuc4DEvD3',
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
@@ -34,7 +34,7 @@ export const GiscusComment: React.FC<GiscusCommentProps> = ({
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'top');
+    script.setAttribute('data-input-position', 'bottom');
     script.setAttribute('data-theme', color === 'dark' ? 'dark_dimmed' : 'light');
     script.setAttribute('data-lang', location.pathname.startsWith('/en-US') ? 'en' : 'zh-CN');
     script.setAttribute('crossorigin', 'anonymous');
