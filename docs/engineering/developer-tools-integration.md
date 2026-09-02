@@ -146,7 +146,34 @@ codex "请只回复：api-ok"
 
 ---
 
-## 🌐 四、通用 OpenAI 兼容客户端配置
+## 🎛️ 四、CC Switch 桌面助手一键切换配置
+
+[CC Switch (ccswitch.io)](https://ccswitch.io) 是一款专为 Claude Code、Codex、OpenCode 等 Agent CLI 打造的跨平台多服务商管理与一键切换桌面端工具。
+
+```mermaid
+graph LR
+    CCSwitch[CC Switch 桌面端] -->|一键写入配置 / 环境变量| CC[Claude Code CLI]
+    CCSwitch -->|一键写入 config.toml & auth.json| CDX[Codex CLI]
+    CCSwitch -->|集中管理| API[VibeCoding API 网关]
+```
+
+### 1. 快速接入步骤
+
+1. **下载安装**：前往 [CC Switch 官网](https://ccswitch.io) 或 [GitHub Releases](https://github.com/farion1231/cc-switch/releases) 下载对应系统安装包（Windows / macOS / Linux）。
+2. **添加 Provider 服务商**：
+   - **服务商名称 (Provider Name)**：`VibeCoding`
+   - **适用目标 (Target Agent)**：选择 `Claude Code` 或 `Codex`
+   - **Base URL**：
+     - Claude Code 模式填入：`https://vibecoding.kuyiduo.hidns.vip`
+     - OpenAI / Codex 模式填入：`https://vibecoding.kuyiduo.hidns.vip`
+   - **API Key**：填入控制台获取的 API 密钥
+   - **模型 (Model)**：填入当前可用模型 ID（如 `claude-3-7-sonnet-20250219` 或 `gpt-5.6-sol`）
+3. **一键激活 (Apply / Switch)**：
+   - 点击 **Activate / Switch** 按钮，CC Switch 会自动接管并热更新当前系统的环境变量与配置文件，无需手动修改 `settings.json` 或 `config.toml`。
+
+---
+
+## 🌐 五、通用 OpenAI 兼容客户端配置
 
 适用于 Pi、Cursor、Cherry Studio、OpenCode、NextChat 等兼容 OpenAI 协议的工具。
 
@@ -176,12 +203,13 @@ curl --http1.1 https://vibecoding.kuyiduo.hidns.vip/v1/chat/completions \
 
 ---
 
-## 📦 五、官方客户端与环境依赖下载
+## 📦 六、官方客户端与环境依赖下载
 
 建议仅从官方渠道或 GitHub Releases 获取安装包：
 
 | 工具 / 运行时 | 功能说明 | 官方渠道 |
 | :--- | :--- | :--- |
+| **CC Switch** | Claude Code / Codex 多服务商一键切换桌面助手 | [CC Switch 官网](https://ccswitch.io/) ｜ [GitHub](https://github.com/farion1231/cc-switch) |
 | **Claude Code** | Anthropic 官方终端自主编程 Agent | [Anthropic 官方文档](https://docs.anthropic.com/en/docs/claude-code) |
 | **Codex** | 桌面、IDE 与 CLI 编程工具 | [OpenAI Codex GitHub](https://github.com/openai/codex) |
 | **Node.js LTS** | Claude Code CLI 运行时依赖 | [Node.js 官方下载](https://nodejs.org/) |
@@ -191,7 +219,7 @@ curl --http1.1 https://vibecoding.kuyiduo.hidns.vip/v1/chat/completions \
 
 ---
 
-## 🚨 六、常见问题与排错指南 (Troubleshooting)
+## 🚨 七、常见问题与排错指南 (Troubleshooting)
 
 ### 1. 401 Unauthorized / Invalid API Key
 - **检查 Key 格式**：确认请求头为 `Authorization: Bearer YOUR_KEY`，前后未包含多余空格或换行。
@@ -209,7 +237,7 @@ curl --http1.1 https://vibecoding.kuyiduo.hidns.vip/v1/chat/completions \
 
 ---
 
-## 📊 七、官方服务状态与模型评测对比
+## 📊 八、官方服务状态与模型评测对比
 
 在定位问题与模型选型时，可参考以下官方状态页与公开评测基准：
 

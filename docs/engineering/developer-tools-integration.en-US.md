@@ -146,7 +146,33 @@ codex "Reply with exactly: api-ok"
 
 ---
 
-## 🌐 4. Generic OpenAI-Compatible Clients (Chat Completions)
+## 🎛️ 4. CC Switch Desktop Assistant (One-Click Provider Switcher)
+
+[CC Switch (ccswitch.io)](https://ccswitch.io) is a cross-platform desktop All-in-One assistant tailored for Claude Code, Codex, and OpenCode, enabling instant provider and environment switching.
+
+```mermaid
+graph LR
+    CCSwitch[CC Switch Desktop App] -->|1-Click Hot Configuration| CC[Claude Code CLI]
+    CCSwitch -->|Auto Update config.toml & auth.json| CDX[Codex CLI]
+    CCSwitch -->|Manage & Route| API[VibeCoding API Gateway]
+```
+
+### Setup Steps
+
+1. **Install CC Switch**: Download the binary for Windows / macOS / Linux from [CC Switch Official Website](https://ccswitch.io) or [GitHub Releases](https://github.com/farion1231/cc-switch/releases).
+2. **Add Custom Provider**:
+   - **Provider Name**: `VibeCoding`
+   - **Target Agent**: Choose `Claude Code` or `Codex`
+   - **Base URL**:
+     - Claude Code mode: `https://vibecoding.kuyiduo.hidns.vip`
+     - OpenAI / Codex mode: `https://vibecoding.kuyiduo.hidns.vip`
+   - **API Key**: Enter your generated API Token
+   - **Model ID**: Active model ID (e.g., `claude-3-7-sonnet-20250219` or `gpt-5.6-sol`)
+3. **Activate**: Click **Activate / Switch**. CC Switch automatically synchronizes environment variables and local config files without requiring manual edits to `settings.json` or `config.toml`.
+
+---
+
+## 🌐 5. Generic OpenAI-Compatible Clients (Chat Completions)
 
 Applicable to tools like Pi, Cursor, Cherry Studio, OpenCode, NextChat, etc.
 
@@ -176,12 +202,13 @@ curl --http1.1 https://vibecoding.kuyiduo.hidns.vip/v1/chat/completions \
 
 ---
 
-## 📦 5. Official Client & Dependency Downloads
+## 📦 6. Official Client & Dependency Downloads
 
 Always obtain installers and dependencies directly from official channels:
 
 | Tool / Dependency | Description | Official Link |
 | :--- | :--- | :--- |
+| **CC Switch** | All-in-One provider switcher for Claude Code & Codex | [CC Switch Official](https://ccswitch.io/) \| [GitHub](https://github.com/farion1231/cc-switch) |
 | **Claude Code** | Anthropic's autonomous terminal coding agent | [Anthropic Docs](https://docs.anthropic.com/en/docs/claude-code) |
 | **Codex** | OpenAI Codex desktop, CLI & IDE tools | [OpenAI Codex GitHub](https://github.com/openai/codex) |
 | **Node.js LTS** | Runtime for Claude Code and Codex CLI | [Node.js Official](https://nodejs.org/) |
@@ -191,7 +218,7 @@ Always obtain installers and dependencies directly from official channels:
 
 ---
 
-## 🚨 6. Troubleshooting
+## 🚨 7. Troubleshooting
 
 - **401 Unauthorized**: Ensure your token is passed via `Authorization: Bearer YOUR_KEY` without extra spaces or line breaks, and that the key group contains the required model.
 - **404 Not Found**: Check for duplicate `/v1` in the path (e.g. `.../v1/v1/...`). Verify model ID against the console.
@@ -200,7 +227,7 @@ Always obtain installers and dependencies directly from official channels:
 
 ---
 
-## 📊 7. Service Status & Benchmark References
+## 📊 8. Service Status & Benchmark References
 
 - **Status Monitors**: [OpenAI Status](https://status.openai.com/) | [Anthropic Status](https://status.anthropic.com/)
 - **Public Benchmarks**: [Artificial Analysis](https://artificialanalysis.ai/models) | [LMArena Leaderboard](https://lmarena.ai/leaderboard) | [LiveBench](https://livebench.ai/)
