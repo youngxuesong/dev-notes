@@ -30,7 +30,7 @@ export default defineConfig({
   favicons: ['https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4t3_0.5.png'],
   headScripts: [
     {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000',
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4850459348723767',
       async: true,
       crossorigin: 'anonymous',
     },

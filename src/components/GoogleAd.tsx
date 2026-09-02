@@ -42,7 +42,7 @@ export const GoogleAd: React.FC<GoogleAdProps> = ({
       <ins
         className="adsbygoogle"
         style={{ display: 'block' }}
-        data-ad-client="ca-pub-0000000000000000" // 替换为你的真实 ID
+        data-ad-client="ca-pub-4850459348723767" // Google AdSense 发布商 ID
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive={responsive ? 'true' : 'false'}
