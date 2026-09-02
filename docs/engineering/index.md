@@ -11,6 +11,7 @@ nav:
 
 ## 目录索引
 
+- [实战指南：AI 编码开发工具接入实战 (Claude Code / Codex / 通用客户端)](/engineering/developer-tools-integration)
 - [架构实战：高可用 LLM 网关容灾调度](/engineering/llm-gateway-failover)
 - [运维实战：Caddy 生产环境自动化反向代理](/engineering/caddy-production)
 - [踩坑备忘 (TIL)：Anthropic API 429 优雅重试退避](/engineering/til-llm-rate-limit)

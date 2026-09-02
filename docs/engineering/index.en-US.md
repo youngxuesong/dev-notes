@@ -11,6 +11,7 @@ Hands-on notes on resilient API gateways, failover routing, production DevOps, a
 
 ## Table of Contents
 
+- [Integration Guide: AI Coding Tools Integration (Claude Code / Codex / OpenAI Clients)](/en-US/engineering/developer-tools-integration)
 - [Architecture: Building Resilient LLM Gateways](/en-US/engineering/llm-gateway-failover)
 - [DevOps: Production-Ready Caddy Automation](/en-US/engineering/caddy-production)
 - [TIL: Handling Anthropic API 429 Errors Gracefully](/en-US/engineering/til-llm-rate-limit)
