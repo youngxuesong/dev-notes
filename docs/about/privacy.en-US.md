@@ -26,4 +26,4 @@ We implement strict HTTPS / TLS transport encryption across the entire website t
 
 ## 3. Contact Us
 If you have questions regarding this Privacy Policy, please contact us at:
-- Email: `contact@yourdomain.com`
+- Email: `youngxuesong@gmail.com`

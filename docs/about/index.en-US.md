@@ -15,13 +15,13 @@ Hi there! I am a full-stack engineer and indie maker passionate about building r
 - Explore more on my GitHub: [github.com/youngxuesong](https://github.com/youngxuesong)
 
 ## 🛠️ Tech Stack
-- **Backend**: Go / Node.js / Python / PostgreSQL / Redis
+- **Backend**: Java / Node.js / Python / MySQL / TDSQL / PostgreSQL / Redis
 - **Frontend**: React / Vue 3 / TypeScript / TailwindCSS
 - **Cloud & DevOps**: Docker / Caddy / Linux / Cloudflare / WireGuard
 
 ## 📮 Contact
 - **GitHub**: [github.com/youngxuesong](https://github.com/youngxuesong)
-- **Email**: `contact@yourdomain.com`
+- **Email**: `youngxuesong@gmail.com`
 
 ---
 

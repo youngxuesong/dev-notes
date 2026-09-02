@@ -15,13 +15,13 @@ nav:
 - 更多开源项目可访问我的 GitHub：[github.com/youngxuesong](https://github.com/youngxuesong)
 
 ## 🛠️ 技术栈
-- **后端**：Go / Node.js / Python / PostgreSQL / Redis
+- **后端**：Java / Node.js / Python / MySQL / TDSQL / PostgreSQL / Redis
 - **前端**：React / Vue 3 / TypeScript / TailwindCSS
 - **云原生与运维**：Docker / Caddy / Linux / Cloudflare / WireGuard
 
 ## 📮 联系方式
 - **GitHub**: [github.com/youngxuesong](https://github.com/youngxuesong)
-- **Email**: `contact@yourdomain.com`
+- **Email**: `youngxuesong@gmail.com`
 
 ---
 
