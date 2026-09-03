@@ -34,3 +34,6 @@ graph LR
 
 4. **[04. Beyond Travel & Dining: Setting Up Ant Bank Macau](/en-US/finance/macau-ant-bank-guide)**  
    *Frictionless setup for an Ant Group-backed regulated multi-currency offshore account.*
+
+5. **[05. Global Address Validator & Formatter Tool](/en-US/finance/address-validator)**  
+   *Interactive global map geocoding & standard offshore address generator for Wise, Stripe, and bank KYC.*
