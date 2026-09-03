@@ -11,8 +11,6 @@ When applying for offshore bank accounts (HSBC, BOCHK, ZA Bank), registering Wis
 This tool provides **global geocoding validation, interactive map plotting**, and automatically breaks down your location into standardized **`Address Line 1 / Line 2 / City / State / Postcode`** fields.
 :::
 
-import AddressValidatorTool from '../../src/components/AddressValidatorTool';
-
 <AddressValidatorTool />
 
 ---

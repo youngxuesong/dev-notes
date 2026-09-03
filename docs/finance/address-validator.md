@@ -11,8 +11,6 @@ order: 5
 本工具支持**中文/拼音/英文地址全球智能解析**，在地图上**精确定位打点**，并自动拆解为海外金融系统标准的 **`Address Line 1 / Line 2 / City / State / Postcode`** 格式。
 :::
 
-import AddressValidatorTool from '../../src/components/AddressValidatorTool';
-
 <AddressValidatorTool />
 
 ---
