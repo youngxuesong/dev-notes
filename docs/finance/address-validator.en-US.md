@@ -5,6 +5,8 @@ order: 5
 
 # 🗺️ Global Address Validator & Formatter for Offshore Banking
 
+![Address validation from raw text to standard fields](/illustrations/address-check.svg)
+
 :::info Overview
 When applying for offshore bank accounts (HSBC, BOCHK, ZA Bank), registering Wise/Stripe accounts, or setting up billing addresses for overseas credit cards (OpenAI / AWS), non-standard address formatting is the leading cause of **KYC rejections and AVS security triggers**.
 

@@ -5,6 +5,8 @@ order: 4
 
 # Lifecycle Hooks in Agent Systems
 
+![Hooks intercept and hand off execution](/illustrations/hooks-skills.svg)
+
 In production Agent runtimes, **Hooks** provide the essential architectural scaffolding for deterministic guardrails, real-time command interception, observability, and workflow governance.
 
 ```mermaid

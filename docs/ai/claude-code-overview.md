@@ -5,6 +5,8 @@ order: 7
 
 # Claude Code 总览与设计哲学
 
+![Claude Code 终端原生架构示意图](/illustrations/claude-architecture.svg)
+
 **Claude Code** 是 Anthropic 推出的下一代终端自主编程 Agent。与传统 IDE 侧边栏 Chatbot 不同，Claude Code 真正扎根于**命令行（CLI）与工程仓库底层**。
 
 ```mermaid

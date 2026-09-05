@@ -5,6 +5,8 @@ order: 5
 
 # 🗺️ 出海开户标准英文地址转换与地图核验工具
 
+![地址从原始文本到地图核验和标准字段](/illustrations/address-check.svg)
+
 :::info 工具说明
 做境外银行开户（汇丰、中银香港、ZA Bank）、Wise 注册、Stripe 账户设立及绑定海外信用卡（OpenAI / AWS 账单）时，地址填写不规范是导致 **KYC 审核被拒或 AVS 风控拦截** 的最高频原因。
 

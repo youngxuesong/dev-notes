@@ -4,6 +4,8 @@ title: Optimizing Claude API with Prompt Caching
 
 # Optimizing Claude API Costs & Latency with Prompt Caching
 
+![Prompt caching for stable prefixes and changing requests](/illustrations/prompt-cache.svg)
+
 In long-context LLM interactions, **input tokens typically account for over 80% of total API expenses**. Anthropic's **Prompt Caching** capability slashes cache-read input token costs by up to **90%**, while substantially decreasing Time to First Token (TTFT).
 
 ```mermaid

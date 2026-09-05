@@ -5,6 +5,8 @@ order: 11
 
 # Claude Code 内部架构剖析与执行链路
 
+![Claude Code 从终端到执行结果的架构示意图](/illustrations/claude-architecture.svg)
+
 深入底层源码与运行机制，Claude Code 的端到端执行链路可以划分为清晰的 **7 步生命周期**：
 
 ```mermaid

@@ -5,6 +5,8 @@ order: 1
 
 # 🛠️ AI 编码开发工具接入实战 (Claude Code / Codex / 通用客户端)
 
+![多种 AI 客户端通过统一 API 网关接入](/illustrations/api-gateway.svg)
+
 :::info 说明
 本指南系统整理主流 AI 编程 Agent 与代码助手工具（Claude Code、Codex、Cursor、Pi、Cherry Studio 等）接入本站 API 网关服务（`https://vibecoding.kuyiduo.hidns.vip`）的协议规范、配置模版、路由格式及连通性排错方案。
 :::

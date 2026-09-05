@@ -5,6 +5,8 @@ order: 2
 
 # What is an AI Agent: Foundational Concepts
 
+![The Agent loop from goal to action](/illustrations/agent-loop.svg)
+
 As Large Language Models (LLMs) evolve from passive conversational interfaces (Chatbots) toward autonomous execution engines, **AI Agents** represent the core paradigm shift in modern computing.
 
 ```mermaid

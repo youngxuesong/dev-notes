@@ -5,6 +5,8 @@ order: 4
 
 # 什么是 Hooks：生命周期钩子与拦截机制
 
+![Hooks 在执行前后拦截与交接的示意图](/illustrations/hooks-skills.svg)
+
 在现代 Agent 架构中，**Hooks（钩子）** 是实现安全风控、状态拦截、自动化审计以及工作流扩展的核心基础设施。
 
 ```mermaid

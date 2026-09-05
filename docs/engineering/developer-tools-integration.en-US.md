@@ -5,6 +5,8 @@ order: 1
 
 # 🛠️ AI Developer Tools Integration Guide (Claude Code / Codex / OpenAI Clients)
 
+![Multiple AI clients entering through one API gateway](/illustrations/api-gateway.svg)
+
 :::info Overview
 This guide covers connecting leading AI coding agents and development tools (Claude Code, Codex, Cursor, Pi, Cherry Studio, OpenCode, etc.) to the API gateway service (`https://vibecoding.kuyiduo.hidns.vip`), including protocol specifications, configuration templates, routing patterns, and troubleshooting steps.
 :::

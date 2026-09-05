@@ -5,6 +5,8 @@ order: 7
 
 # Claude Code: High-Level Overview & Philosophy
 
+![Claude Code terminal-native architecture](/illustrations/claude-architecture.svg)
+
 **Claude Code** represents Anthropic's flagship agentic coding interface. Unlike conventional IDE chat sidebars, Claude Code operates as a **first-class terminal native agent** integrated directly into developer environments.
 
 ```mermaid

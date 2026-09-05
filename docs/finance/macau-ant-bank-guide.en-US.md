@@ -5,6 +5,8 @@ order: 5
 
 # Beyond Travel & Dining: Setting Up Ant Bank Macau
 
+![Digital bank onboarding in Macau](/illustrations/digital-bank.svg)
+
 When visiting Macau, developers and digital nomads can easily open a legitimate, regulated offshore bank account backed by **Ant Group—Ant Bank (Macao)** in just a few minutes.
 
 ```mermaid

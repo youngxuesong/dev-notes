@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">MCP bridge</title><desc id="desc">A black operator carries context across a narrow bridge between a model and tools.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M220 600 Q460 370 720 600 T1220 600"/>
+    <path d="M290 600 L290 710 M1190 600 L1190 710"/>
+    <path d="M720 600 L720 300" stroke="#e67e22"/>
+    <path d="M720 300 l-24 52 M720 300 l24 52" stroke="#e67e22"/>
+    <rect x="520" y="190" width="400" height="120" rx="24"/>
+    <path d="M1000 430 q160 -110 300 0 q-140 110 -300 0Z"/>
+    <path d="M1045 430 h210 M1100 390 v80 M1180 390 v80" stroke="#3d78b8"/>
+  </g>
+  <g fill="#171717">
+    <path d="M665 535 C660 495 690 468 726 475 C759 482 771 515 757 542 C743 568 711 579 684 568 C674 564 667 552 665 535Z"/>
+    <path d="M686 566 l-5 58 M734 565 l8 58" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="696" cy="510" r="7" fill="#fff"/><circle cx="727" cy="510" r="7" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="36" fill="#171717">
+    <text x="620" y="265">上下文</text><text x="1010" y="355">工具世界</text><text x="205" y="760">模型</text>
+    <text x="1160" y="770" fill="#3d78b8">可调用</text><text x="650" y="700" fill="#e67e22">桥</text>
+  </g>
+</svg>

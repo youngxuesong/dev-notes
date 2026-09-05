@@ -5,6 +5,8 @@ order: 10
 
 # Claude Code MCP & Multi-Agent Collaboration
 
+![MCP bridge between the model and external tools](/illustrations/mcp-bridge.svg)
+
 When complex initiatives cross disparate architectural domains, **MCP integrations and multi-agent swarms** provide the necessary coordination framework.
 
 ```mermaid

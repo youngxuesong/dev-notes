@@ -5,6 +5,8 @@ order: 9
 
 # Claude Code 工具系统（Tool Use 进阶）
 
+![Claude Code 工具选择与执行示意图](/illustrations/tool-system.svg)
+
 Claude Code 的强大不仅源于底座模型，更在于其高度精炼的**原生工具系统（Native Toolset）**。
 
 ```mermaid

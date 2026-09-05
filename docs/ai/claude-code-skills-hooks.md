@@ -5,6 +5,8 @@ order: 8
 
 # CLAUDE.md、Skills 与 Hooks 实战
 
+![CLAUDE.md、Skills 与 Hooks 的协作示意图](/illustrations/hooks-skills.svg)
+
 在 Claude Code 体系中，**`CLAUDE.md`、Skills（技能扩展）与 Hooks（生命周期钩子）** 构成了定制专属研发 Agent 的三驾马车。
 
 ```mermaid

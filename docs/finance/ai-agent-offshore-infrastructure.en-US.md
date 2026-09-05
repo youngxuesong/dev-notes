@@ -5,6 +5,8 @@ order: 2
 
 # Why AI Agent Developers Care About HK & Macau Financial Infrastructure
 
+![Routing AI product revenue through offshore infrastructure](/illustrations/finance-route.svg)
+
 Many people ask me: As a software engineer deeply immersed in AI Agents, LLM infrastructure, and automation toolchains, why do I invest significant effort exploring **Hong Kong and Macau bank accounts, multi-currency payment channels, and cross-border capital routing**?
 
 The reasoning is straightforward: **Code and AI Agents solve the "productivity equation", whereas offshore financial infrastructure solves the "monetization loop and asset autonomy equation".**

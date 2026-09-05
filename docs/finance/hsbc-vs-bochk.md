@@ -5,6 +5,8 @@ order: 3
 
 # 香港传统大行开户对决：汇丰 (HSBC) VS 中银香港 (BOCHK)
 
+![汇丰与中银香港的使用场景对比](/illustrations/bank-compare.svg)
+
 作为香港金融体系中最核心的两大发钞行，**汇丰香港（HSBC HK One）** 与 **中银香港（BOCHK）** 是每一位出海开发者、跨境投资者必备的底层账户。
 
 ```mermaid
