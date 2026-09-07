@@ -6,42 +6,40 @@ order: 10
 # 🎨 AI Image Studio (BYOK Web Workspace)
 
 :::info Overview
-**AI Image Studio** is a lightweight, zero-backend image generation workspace designed for developers and creators under the **BYOK (Bring Your Own Key)** model. Generate high-resolution visuals via DALL-E 3, Flux, or any OpenAI-compatible image endpoint right from your browser.
+**AI Image Studio** is a pure client-side image generation workspace designed for creators and engineers under the **BYOK (Bring Your Own Key)** model. Curated and adapted from the popular **Awesome GPT Image 2** prompt database, you can generate production-ready visuals via DALL-E 3, Flux, or any OpenAI-compatible image endpoint right from your browser.
 
+- **Curated High-Impact Presets**: Industrial exploded diagrams, golden-hour portraits, 3D collectible toys, and commercial still lifes.
 - **Client-Side Only**: Your API key and base URL are kept strictly inside your browser's LocalStorage.
-- **Multiple Aspect Ratios**: Instant presets for 1:1 (Avatar/Square), 16:9 (Desktop/Banner), and 9:16 (Mobile/Social Stories).
-- **Fast & Direct**: Zero intermediary servers; requests are sent directly from your browser to your API gateway.
+- **Dynamic Aspect Ratio Sync**: Automatically matches recommended aspect ratios (1:1 / 16:9 / 9:16) per preset style.
 :::
 
 <ImageStudioTool />
 
 ---
 
-## 📌 Prompt Engineering Formula for Generative AI
+## 📌 Prompt Engineering Architecture
 
-To achieve production-grade commercial aesthetics, follow this structural formula:
+To consistently achieve commercial-grade visual output, structured prompt syntax drastically outperforms loose keyword stacking:
 
-> **📐 Recommended Formula**:  
-> **Subject** + **Material & Texture** + **Environment / Background** + **Lighting** + **Art Style / Resolution**
-
-### Visual Style Cheatsheet
-
-| Category | Best For | Suggested Keywords |
-| :--- | :--- | :--- |
-| **Commercial Still Life** | E-commerce, Packaging, Hero Banners | `minimalist product photography, studio soft lighting, luxury glass texture, clean negative space, 8k resolution` |
-| **Cyberpunk Sci-Fi** | Concept Art, Wallpapers, Tech Graphics | `cyberpunk futuristic city, neon lights reflections, wet asphalt, cinematic lighting, atmospheric fog, intricate details` |
-| **Japanese Anime Style** | Editorial illustrations, Avatars | `Makoto Shinkai style, summer cumulus clouds, golden hour sunset, anime aesthetic, vibrant warm colors, nostalgic mood` |
-| **3D Clay & Isometric** | App Icons, Toys, IP Characters | `3D claymation style, cute character, pastel colors, soft ambient occlusion, isometric view, trending on ArtStation` |
+> **📐 Industrial Prompt Formula**:  
+> **1. Format / Shot Type**: `exploded view diagram / high-fashion editorial / anime landscape`  
+> **2. Subject & Textures**: `anodized aluminum, frosted glass, glowing cyan circuitry, natural skin pores`  
+> **3. Lighting & Optics**: `golden hour rim lighting, soft diffused studio lighting, 35mm lens, shallow depth of field`  
+> **4. Palette & Aesthetics**: `minimalist luxury monochrome, vibrant sunset hues, clean negative space`  
+> **5. Fidelity & Finish**: `Hasselblad medium format look, 8k resolution, octane 3D render`
 
 ---
 
-## 💡 Frequently Asked Questions
+## 🎨 Creative Categories & Real-World Use Cases
 
-### 1. Does this tool support custom endpoints?
-Yes! You can point the Base URL to any OpenAI-compatible gateway (e.g. Sub2API, Cloudflare AI Gateway, or official OpenAI `https://api.openai.com`).
+### 1. Hardware & Product Visualization
+- **Keywords**: `exploded view product poster, floating internal components, optical lenses, technical schematics`
+- **Use Case**: Showcasing tech gadgets, wearable electronics, or architecture design.
 
-### 2. What is the "Revised Prompt"?
-For models like DALL-E 3, the upstream LLM automatically expands user prompts into rich visual descriptors before synthesis. The revised prompt is displayed below the canvas for inspection and learning.
+### 2. High-Fashion & Cinematic Portraits
+- **Keywords**: `monochrome black and white, futuristic mirrored sunglasses, chrome reflections, rich deep shadows`
+- **Use Case**: Profile avatars, album covers, and creative branding visuals.
 
-### 3. Is my API Key secure?
-Yes. The tool runs completely inside your browser client without any backend collection or proxying.
+### 3. Designer Toys & Stylized 3D Avatars
+- **Keywords**: `cute 3D vinyl toy, rounded forms, soft ambient lighting, Pop Mart collectible, octane render`
+- **Use Case**: IP mascot creation, app icons, and merchandise concept art.

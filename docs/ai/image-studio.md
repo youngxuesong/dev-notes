@@ -6,46 +6,50 @@ order: 10
 # 🎨 AI Image Studio (自带 Key 极速生图工作台)
 
 :::info 工具说明
-这是一个专为创作者与开发者设计的 **轻量级 AI 绘图工作台 (BYOK 模式)**。无需配置复杂的本地环境或下载巨型模型权重，直接通过你的 OpenAI / Sub2API 接口令牌，在浏览器端即可完成 **DALL-E 3 / Flux / 兼容 Midjourney 模型** 的高清图像生成。
+这是一个专为创作者与开发者打造的 **纯客户端轻量级 AI 绘图工作台 (BYOK 模式)**。精选提炼自社区最火热的 **Awesome GPT Image 2** 调参公式与工业级提示词库，无需安装任何本地环境，直接通过你的 API Key 即可快速出图。
 
-- **0 数据留存**：API 令牌与接口地址仅保存在当前浏览器的 LocalStorage，不经过任何第三方服务器中转。
-- **多画幅适配**：原生支持 1:1（方形头像）、16:9（宽屏大片/文章配图）、9:16（手机竖屏海报）。
-- **极速响应**：浏览器直接向 AI 网关发起生成请求并渲染，支持一键下载超高清原图。
+- **深度调优预设**：涵盖“硬件爆炸图”、“日系海滩写真”、“3D盲盒潮玩”、“极简商业静物”等工业级提示词模版。
+- **0 数据留存**：API 令牌与接口地址仅安全保存在当前浏览器的 LocalStorage，不经过任何中间服务器转存。
+- **多画幅联动**：选择预设自动切换对应画幅（1:1 / 16:9 / 9:16），支持生成后一键下载超清原图。
 :::
 
 <ImageStudioTool />
 
 ---
 
-## 📌 提示词 (Prompt) 黄金公式与高频范例
+## 📌 提示词 (Prompt) 黄金架构与工程化技巧
 
-想要生成商业级质感的大片，结构化的 Prompt 描述至关重要：
+想要让生图模型（DALL-E 3 / Flux / Midjourney）生成商业级水准的视觉成品，结构化的提示词组织方式远胜于零散词汇堆叠：
 
-> **📐 优质提示词公式**：  
-> **主体对象 (Subject)** + **材质细节 (Material/Texture)** + **环境背景 (Environment/Setting)** + **光影风格 (Lighting)** + **画质渲染风格 (Style/Resolution)**
-
-### 常见创意风格参考
-
-| 风格分类 | 适用场景 | 关键 Prompt 词汇建议 |
-| :--- | :--- | :--- |
-| **商业静物大片** | 电商产品、包装展示、品牌视觉 | `minimalist product photography, studio soft lighting, luxury glass texture, clean negative space, 8k resolution` |
-| **科幻未来都市** | 概念设计、壁纸、科技感海报 | `cyberpunk futuristic city, neon lights reflections, wet asphalt, cinematic lighting, atmospheric fog, intricate details` |
-| **日系清新动漫** | 故事插画、壁纸、社交媒体封面 | `Makoto Shinkai style, summer cumulus clouds, golden hour sunset, anime aesthetic, vibrant warm colors, nostalgic mood` |
-| **3D 粘土与盲盒** | IP 设计、App 图标、潮流手办 | `3D claymation style, cute character, pastel colors, soft ambient occlusion, isometric view, trending on ArtStation` |
+> **📐 工业级提示词组织模型 (Prompt Architecture)**：  
+> **1. 画面形态 (Format)**：`exploded view / studio portrait / isometric 3D / macro photography`  
+> **2. 主体与材质 (Subject & Material)**：`clear acrylic shell, glowing cyan PCB, titanium frame, porcelain skin`  
+> **3. 光影与氛围 (Lighting & Mood)**：`golden hour backlighting, softbox studio diffused light, volumetric steam`  
+> **4. 色彩与美学 (Color & Palette)**：`monochrome rich blacks, pastel gradient, muted cinematic palette`  
+> **5. 画质与镜头语言 (Rendering & Optics)**：`Hasselblad 80mm f/2.8, depth of field, 8k resolution, photorealistic`
 
 ---
 
-## 💡 常见问题 (FAQ)
+## 🎨 热门分类调优实战 (Prompt Reference)
 
-### 1. 为什么生成的图片长宽比有时会有微调？
-DALL-E 3 等模型标准分辨率包括：
-- **1:1**：`1024x1024`（通用方形）
-- **16:9**：`1792x1024`（横向宽屏）
-- **9:16**：`1024x1792`（垂直构图）  
-工作台会自动将你选择的比例匹配为底层支持的最佳分辨率参数。
+### 1. 科技与硬件工业设计 (Hardware & Industrial)
+- **核心词汇**：`exploded view diagram, floating component layers, motherboard traces, clean studio render`
+- **设计要点**：适合展示耳机、穿戴设备、无人机或数码产品，利用“爆炸图”层级分解展现高端科技感。
 
-### 2. 什么是“Revised Prompt (语义增强提示词)”？
-OpenAI 的 DALL-E 3 模型在收到简短提示词时，其内置的语言模型（GPT-4 视觉层）会自动帮你扩展细节以获得更高的图像质量。生成的图片下方展示的即为模型最终绘制时使用的完整提示词，非常适合用来反推和学习提示词技巧。
+### 2. 真实质感人物写真 (Human Portraiture)
+- **核心词汇**：`golden hour sunset, natural skin texture, soft directional catchlight, 35mm lifestyle photography`
+- **避免负面效果**：不要加入过度的“plastic skin / ultra-smooth face”，保留细微毛孔与光影层次才能获得真实高级感。
 
-### 3. API Key 会泄露吗？
-本页面为纯静态 React 应用，所有 API 请求均直接由你的浏览器端向你指定的 Base URL 发起，代码开源透明，**绝对不会上传或存储你的任何密钥数据**。
+### 3. 3D 盲盒与 IP 潮玩 (3D Collectibles & Avatars)
+- **核心词汇**：`3D stylized designer toy, glossy vinyl texture, rounded forms, ambient occlusion, Pop Mart aesthetic`
+- **设计要点**：控制结构圆润度与柔光阴影，搭配温和低饱和度的马卡龙或莫兰迪色系。
+
+---
+
+## 💡 常见问题与接入说明 (FAQ)
+
+### 1. 为什么推荐使用自带 Key (BYOK) 模式？
+公共生图网站往往需要排队、按月订阅付费，甚至存在偷偷收集提示词的风险。BYOK 模式让你**直接以官方接口成本生图**，且提示词和生成的图片只存在你自己的本地浏览器中。
+
+### 2. 我可以使用哪些接口？
+本工作台完全遵循标准的 OpenAI `/v1/images/generations` 规范。你不仅可以填写官方 `api.openai.com`，也可以直接使用你自建或第三方分发的高速反代网关（例如支持 DALL-E 3、Flux、Midjourney 代理的 API 域名）。

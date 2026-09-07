@@ -1,35 +1,100 @@
 import React, { useState, useEffect } from 'react';
 
-interface Preset {
-  label: string;
-  desc: string;
-  prompt: string;
+export interface PresetCategory {
+  category: string;
+  icon: string;
+  items: Array<{
+    label: string;
+    badge: string;
+    desc: string;
+    prompt: string;
+    defaultRatio?: string;
+  }>;
 }
 
-const PRESETS: Preset[] = [
+// 从 awesome-gpt-image-2 提炼并深度工程化改良的高质量提示词库
+export const CURATED_PRESETS: PresetCategory[] = [
   {
-    label: '商业静物摄影',
-    desc: '极简产品大片',
-    prompt:
-      'Premium commercial product photography, a minimalist luxury perfume bottle on a smooth light stone surface, glass and matte metal textures, soft directional studio lighting, clean negative space, 8k resolution, ultra-detailed.',
+    category: '科技与产品可视化',
+    icon: '⚡',
+    items: [
+      {
+        label: '高科技硬件立体爆炸图 (Exploded View)',
+        badge: '工业设计',
+        desc: '精密机械零件层级拆解与科技质感',
+        defaultRatio: '16:9',
+        prompt:
+          'High-tech exploded view product diagram poster of an ultra-sleek futuristic VR headset. Vertically stacked floating component layers: transparent curved visor, micro-OLED optical lenses, intricate motherboard circuit chip with glowing cyan traces, compact cooling fan, lithium battery module, ergonomic cushioned strap. Clean studio lighting, soft purple and deep blue ambient gradient background, technical annotation lines, 8k resolution, cinematic industrial 3D render.',
+      },
+      {
+        label: '极简奢华商业静物摄影',
+        badge: '电商大片',
+        desc: '自然漫射光与高端材质质感',
+        defaultRatio: '1:1',
+        prompt:
+          'Premium commercial product photography, an elegant minimalist matte black smart device on a textured light limestone surface, brushed titanium and frosted glass accents, soft directional natural morning window light, subtle soft shadow casting, clean negative space, depth of field, Hasselblad medium format camera look, ultra-sharp detail.',
+      },
+    ],
   },
   {
-    label: '赛博朋克概念',
-    desc: '未来都市雨夜',
-    prompt:
-      'Futuristic cyberpunk city street at rainy night, glowing neon signs reflections on wet asphalt, flying vehicles, atmospheric haze, cinematic lighting, photorealistic, intricate architectural details.',
+    category: '角色与社交头像 (Avatar)',
+    icon: '👤',
+    items: [
+      {
+        label: '日系夏日海滨落日写真',
+        badge: '真实质感',
+        desc: '黄金时刻水花飞溅与胶片光影',
+        defaultRatio: '9:16',
+        prompt:
+          'A photorealistic vertical beach portrait of an attractive young East Asian woman smiling warmly at the camera at golden hour sunset, wet shoulder-length dark hair clinging naturally to face. Reaching one hand playfully toward the lens throwing sparkling sea water, freezing droplets in mid-air with high-speed shutter. Warm cinematic backlighting, natural radiant skin texture, shimmering ocean bokeh, 35mm lifestyle photography aesthetic.',
+      },
+      {
+        label: '3D 软胶盲盒潮流玩具手办',
+        badge: 'Q版潮玩',
+        desc: 'C4D/Popmart 风格光泽质感',
+        defaultRatio: '1:1',
+        prompt:
+          'Cute 3D stylized designer toy avatar of an anime chibi girl, smooth glossy plastic and soft vinyl texture, rounded forms, cute dark bob hair with round glasses. Wearing an oversized pastel hoodie and chunky sneakers. Standing on a pastel pedestal against a soft neutral studio background, gentle overhead softbox lighting, ambient occlusion, Pop Mart collectible aesthetic, Octane 3D render.',
+      },
+      {
+        label: '赛博机能风高反光墨镜肖像',
+        badge: '时尚大片',
+        desc: '黑白高对比度极简奢华感',
+        defaultRatio: '1:1',
+        prompt:
+          'Ultra-realistic high-fashion editorial close-up portrait with a minimalist luxury aesthetic, captured entirely in dramatic black and white monochrome tones. Subject wearing futuristic mirrored wraparound shield sunglasses with polished chrome metallic frames. Crisp specular highlights on skin and sunglasses lenses reflecting soft studio lightboxes, deep blacks, subtle 35mm film grain, confident jawline, sharp cinematic focus.',
+      },
+    ],
   },
   {
-    label: '新海诚日漫风',
-    desc: '唯美天空光影',
-    prompt:
-      'Makoto Shinkai anime style illustration, magnificent summer cumulus clouds, radiant golden hour lighting, a train passing by railway crossing, vibrant colors, emotional and nostalgic atmosphere.',
-  },
-  {
-    label: '3D 粘土萌物',
-    desc: 'C4D/Blender 可爱风格',
-    prompt:
-      'Cute 3D claymation astronaut exploring a colorful candy planet, soft clay texture, warm ambient occlusion lighting, isometric view, playful pastel colors, charming details, trending on ArtStation.',
+    category: '插画与概念艺术',
+    icon: '🎨',
+    items: [
+      {
+        label: '新海诚唯美日漫光影',
+        badge: '情绪插画',
+        desc: '夏日积雨云与金黄黄昏逆光',
+        defaultRatio: '16:9',
+        prompt:
+          'Makoto Shinkai anime aesthetic landscape illustration. Majestic towering summer cumulonimbus thunderhead clouds glowing under radiant golden hour sunset. A train passing through a countryside railway crossing with green fields and distant ocean view. Luminous lens flares, vibrant saturated colors, nostalgic and poetic atmosphere, ultra-fine anime background art.',
+      },
+      {
+        label: '复古手绘羊皮纸美食探店地图',
+        badge: '信息图表',
+        desc: '水彩墨线手绘风格文旅地图',
+        defaultRatio: '16:9',
+        prompt:
+          'Illustrated tourist food map infographic on textured vintage beige parchment paper. Hand-drawn watercolor and black ink sketch style. Charming miniature illustrations of landmarks (traditional pavilion, modern skyscraper) and local food delicacies (spicy hotpot, dumplings, tea bowl) connected by soft watercolor roads and rivers. Cute cartoon mascot in corner, warm friendly hand-lettered aesthetic, intricate details.',
+      },
+      {
+        label: '未来赛博朋克雨夜都市',
+        badge: '科幻场景',
+        desc: '霓虹倒影与深邃纵深感',
+        defaultRatio: '16:9',
+        prompt:
+          'Futuristic cyberpunk metropolis at pouring rain night, towering skyscrapers with giant holographic anime advertisements, flying hovercars navigating between sky bridges, neon light reflections on wet asphalt streets. Atmospheric dense steam, volumetric lighting, high contrast cinematic color grading, hyper-detailed photorealistic concept art.',
+      },
+    ],
   },
 ];
 
@@ -41,21 +106,22 @@ interface AspectOption {
 }
 
 const ASPECT_OPTIONS: AspectOption[] = [
-  { label: '1:1 方形', ratio: '1:1', size: '1024x1024', desc: '社交头像 / Instagram' },
-  { label: '16:9 横屏', ratio: '16:9', size: '1792x1024', desc: '电脑壁纸 / 文章配图' },
-  { label: '9:16 竖屏', ratio: '9:16', size: '1024x1792', desc: '手机壁纸 / 小红书 / 故事' },
+  { label: '1:1 方形', ratio: '1:1', size: '1024x1024', desc: '社交头像 / 潮玩' },
+  { label: '16:9 横屏', ratio: '16:9', size: '1792x1024', desc: '桌面壁纸 / 科技大片' },
+  { label: '9:16 竖屏', ratio: '9:16', size: '1024x1792', desc: '手机壁纸 / 真实人像' },
 ];
 
 export const ImageStudioTool: React.FC = () => {
   // 控制参数
-  const [prompt, setPrompt] = useState<string>(PRESETS[0].prompt);
-  const [selectedSize, setSelectedSize] = useState<string>('1024x1024');
+  const [prompt, setPrompt] = useState<string>(CURATED_PRESETS[0].items[0].prompt);
+  const [selectedSize, setSelectedSize] = useState<string>('1792x1024');
   const [model, setModel] = useState<string>('dall-e-3');
   const [quality, setQuality] = useState<'standard' | 'hd'>('standard');
   const [baseUrl, setBaseUrl] = useState<string>('https://vibecoding.kuyiduo.hidns.vip');
   const [apiKey, setApiKey] = useState<string>('');
   const [rememberKey, setRememberKey] = useState<boolean>(true);
   const [showKey, setShowKey] = useState<boolean>(false);
+  const [activeCategory, setActiveCategory] = useState<number>(0);
 
   // 运行状态
   const [loading, setLoading] = useState<boolean>(false);
@@ -77,7 +143,6 @@ export const ImageStudioTool: React.FC = () => {
     }
   }, []);
 
-  // 保存或清除本地记忆
   const handleKeyChange = (val: string) => {
     setApiKey(val);
     if (rememberKey) {
@@ -109,6 +174,14 @@ export const ImageStudioTool: React.FC = () => {
     } catch (e) {}
   };
 
+  // 选择预设时，自动联动最佳画幅比例
+  const applyPreset = (item: { prompt: string; defaultRatio?: string }) => {
+    setPrompt(item.prompt);
+    if (item.defaultRatio === '1:1') setSelectedSize('1024x1024');
+    else if (item.defaultRatio === '16:9') setSelectedSize('1792x1024');
+    else if (item.defaultRatio === '9:16') setSelectedSize('1024x1792');
+  };
+
   // 触发生成
   const handleGenerate = async () => {
     if (!prompt.trim()) {
@@ -116,16 +189,14 @@ export const ImageStudioTool: React.FC = () => {
       return;
     }
     if (!apiKey.trim()) {
-      setErrorMsg('请在左下方 Connection 处填入你的 API Key');
+      setErrorMsg('请在下方 Connection 区域填入你的 API Key');
       return;
     }
 
     setLoading(true);
     setErrorMsg(null);
 
-    // 标准化 endpoint 地址
     let cleanBase = baseUrl.trim().replace(/\/+$/, '');
-    // 兼容用户填写了完整 /v1 或者裸域名
     let endpoint = cleanBase.endsWith('/v1')
       ? `${cleanBase}/images/generations`
       : `${cleanBase}/v1/images/generations`;
@@ -164,7 +235,6 @@ export const ImageStudioTool: React.FC = () => {
         setCurrentImage(imgUrl);
         setCurrentRevisedPrompt(item.revised_prompt || null);
 
-        // 加入历史记录
         setHistory((prev) => [
           {
             url: imgUrl,
@@ -172,7 +242,7 @@ export const ImageStudioTool: React.FC = () => {
             size: selectedSize,
             time: new Date().toLocaleTimeString(),
           },
-          ...prev.slice(0, 9), // 最多保留 10 张
+          ...prev.slice(0, 9),
         ]);
       } else {
         throw new Error('未获取到生成的图片');
@@ -193,41 +263,139 @@ export const ImageStudioTool: React.FC = () => {
 
   return (
     <div style={{ margin: '24px 0', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-      {/* 顶部声明 / 模式说明 */}
+      {/* 顶部标题条 */}
       <div
         style={{
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '12px 18px',
-          background: 'linear-gradient(135deg, #1e1e24 0%, #2a2a38 100%)',
+          padding: '14px 20px',
+          background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)',
           color: '#fff',
           borderRadius: '12px 12px 0 0',
           fontSize: '13px',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <span style={{ fontSize: '18px' }}>🎨</span>
-          <span style={{ fontWeight: 600, letterSpacing: '0.5px' }}>AI Image Studio (BYOK 极速生图工作台)</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <span style={{ fontSize: '20px' }}>🎨</span>
+          <div>
+            <div style={{ fontWeight: 600, fontSize: '14px', letterSpacing: '0.4px' }}>
+              AI Image Studio (精选灵感工作台)
+            </div>
+            <div style={{ fontSize: '11px', color: '#9ca3af', marginTop: '2px' }}>
+              集成 Awesome-GPT-Image-2 精品调参公式 · BYOK 模式
+            </div>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '8px' }}>
           <span
             style={{
-              fontSize: '10px',
-              padding: '2px 6px',
-              background: '#10b981',
+              fontSize: '11px',
+              padding: '3px 8px',
+              background: '#059669',
               color: '#fff',
               borderRadius: '4px',
               fontWeight: 500,
             }}
           >
-            浏览器直连 · 0 数据留存
+            浏览器直连
+          </span>
+          <span
+            style={{
+              fontSize: '11px',
+              padding: '3px 8px',
+              background: '#374151',
+              color: '#d1d5db',
+              borderRadius: '4px',
+            }}
+          >
+            DALL-E 3 / Flux
           </span>
         </div>
-        <span style={{ color: '#9ca3af', fontSize: '12px' }}>
-          支持 DALL-E 3 / Flux / Midjourney 兼容网关
-        </span>
       </div>
 
-      {/* 主体工作台：左侧控制，右侧画布 */}
+      {/* 精选分类预设选择区 */}
+      <div
+        style={{
+          background: '#f3f4f6',
+          borderLeft: '1px solid #e5e7eb',
+          borderRight: '1px solid #e5e7eb',
+          padding: '12px 20px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+        }}
+      >
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+          <span style={{ fontSize: '12px', fontWeight: 600, color: '#4b5563' }}>🎯 灵感预设：</span>
+          <div style={{ display: 'flex', gap: '6px' }}>
+            {CURATED_PRESETS.map((cat, idx) => (
+              <button
+                key={idx}
+                type="button"
+                onClick={() => setActiveCategory(idx)}
+                style={{
+                  padding: '4px 10px',
+                  fontSize: '11px',
+                  fontWeight: activeCategory === idx ? 600 : 500,
+                  borderRadius: '6px',
+                  border: activeCategory === idx ? '1px solid #2563eb' : '1px solid #d1d5db',
+                  background: activeCategory === idx ? '#eff6ff' : '#fff',
+                  color: activeCategory === idx ? '#1d4ed8' : '#4b5563',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s',
+                }}
+              >
+                {cat.icon} {cat.category}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* 当前分类下的精选 Prompt 卡片 */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '8px' }}>
+          {CURATED_PRESETS[activeCategory].items.map((item, idx) => (
+            <div
+              key={idx}
+              onClick={() => applyPreset(item)}
+              style={{
+                background: '#fff',
+                border: '1px solid #e5e7eb',
+                borderRadius: '8px',
+                padding: '8px 12px',
+                cursor: 'pointer',
+                transition: 'all 0.15s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#3b82f6';
+                e.currentTarget.style.boxShadow = '0 2px 6px rgba(59, 130, 246, 0.12)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = '#e5e7eb';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
+                <span style={{ fontSize: '12px', fontWeight: 600, color: '#1f2937' }}>{item.label}</span>
+                <span
+                  style={{
+                    fontSize: '10px',
+                    padding: '1px 5px',
+                    borderRadius: '4px',
+                    background: '#f3f4f6',
+                    color: '#6b7280',
+                  }}
+                >
+                  {item.badge}
+                </span>
+              </div>
+              <div style={{ fontSize: '11px', color: '#6b7280' }}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 主体工作台：左侧参数，右侧画布 */}
       <div
         style={{
           display: 'grid',
@@ -242,26 +410,32 @@ export const ImageStudioTool: React.FC = () => {
         }}
       >
         {/* 左侧控制栏 */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-          {/* 1. Prompt 区 */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {/* Prompt 文本框 */}
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
               <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151' }}>
-                💡 画面描述 (Prompt)
+                📝 提示词 (Prompt)
               </label>
-              <span style={{ fontSize: '11px', color: '#9ca3af' }}>英文出图更精准</span>
+              <button
+                type="button"
+                onClick={() => setPrompt('')}
+                style={{ fontSize: '11px', color: '#9ca3af', background: 'none', border: 'none', cursor: 'pointer' }}
+              >
+                清空
+              </button>
             </div>
             <textarea
-              rows={5}
+              rows={6}
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
-              placeholder="用中英文细致描述你心中的构图、光影、主体和风格..."
+              placeholder="输入中英文详细描述，包括主体、材质、光影、环境和风格..."
               style={{
                 width: '100%',
                 padding: '10px 12px',
                 borderRadius: '8px',
                 border: '1px solid #d1d5db',
-                fontSize: '13px',
+                fontSize: '12px',
                 lineHeight: '1.5',
                 resize: 'vertical',
                 boxSizing: 'border-box',
@@ -269,34 +443,9 @@ export const ImageStudioTool: React.FC = () => {
                 fontFamily: 'inherit',
               }}
             />
-            {/* 灵感预设按钮 */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '8px' }}>
-              {PRESETS.map((p, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => setPrompt(p.prompt)}
-                  style={{
-                    padding: '4px 8px',
-                    fontSize: '11px',
-                    background: '#fff',
-                    border: '1px solid #e5e7eb',
-                    borderRadius: '6px',
-                    cursor: 'pointer',
-                    color: '#4b5563',
-                    transition: 'all 0.15s',
-                  }}
-                  onMouseEnter={(e) => ((e.target as HTMLElement).style.borderColor = '#3b82f6')}
-                  onMouseLeave={(e) => ((e.target as HTMLElement).style.borderColor = '#e5e7eb')}
-                  title={p.desc}
-                >
-                  ✨ {p.label}
-                </button>
-              ))}
-            </div>
           </div>
 
-          {/* 2. 画幅比例规格 */}
+          {/* 画幅比例规格 */}
           <div>
             <label style={{ fontSize: '13px', fontWeight: 600, color: '#374151', display: 'block', marginBottom: '8px' }}>
               📐 画幅比例与尺寸
@@ -312,7 +461,7 @@ export const ImageStudioTool: React.FC = () => {
                     style={{
                       padding: '8px 6px',
                       borderRadius: '8px',
-                      border: active ? '2px solid #3b82f6' : '1px solid #d1d5db',
+                      border: active ? '2px solid #2563eb' : '1px solid #d1d5db',
                       background: active ? '#eff6ff' : '#fff',
                       cursor: 'pointer',
                       textAlign: 'center',
@@ -329,7 +478,7 @@ export const ImageStudioTool: React.FC = () => {
             </div>
           </div>
 
-          {/* 3. 模型与画质选择 */}
+          {/* 模型与画质 */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
             <div>
               <label style={{ fontSize: '12px', fontWeight: 600, color: '#374151', display: 'block', marginBottom: '4px' }}>
@@ -367,13 +516,13 @@ export const ImageStudioTool: React.FC = () => {
                   boxSizing: 'border-box',
                 }}
               >
-                <option value="standard">Standard (标准)</option>
-                <option value="hd">HD (超高清细节)</option>
+                <option value="standard">Standard (标准模式)</option>
+                <option value="hd">HD (超清细节渲染)</option>
               </select>
             </div>
           </div>
 
-          {/* 4. Connection 凭证配置 */}
+          {/* Connection 凭证设置 */}
           <div
             style={{
               padding: '12px',
@@ -387,10 +536,9 @@ export const ImageStudioTool: React.FC = () => {
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span style={{ fontSize: '12px', fontWeight: 600, color: '#4b5563' }}>🔐 API 接入凭据 (Connection)</span>
-              <span style={{ fontSize: '11px', color: '#10b981' }}>仅存本地 LocalStorage</span>
+              <span style={{ fontSize: '11px', color: '#10b981' }}>浏览器本地安全存储</span>
             </div>
 
-            {/* Base URL */}
             <div>
               <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '3px' }}>Base URL (网关地址)</div>
               <input
@@ -410,7 +558,6 @@ export const ImageStudioTool: React.FC = () => {
               />
             </div>
 
-            {/* API Key */}
             <div>
               <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '3px' }}>API Key (令牌)</div>
               <div style={{ position: 'relative' }}>
@@ -455,11 +602,11 @@ export const ImageStudioTool: React.FC = () => {
                 checked={rememberKey}
                 onChange={(e) => handleRememberToggle(e.target.checked)}
               />
-              记住此设备配置 (无需每次重新输入)
+              记住此设备配置 (保存在本地 LocalStorage)
             </label>
           </div>
 
-          {/* 生成按钮 */}
+          {/* 生成主按钮 */}
           <button
             type="button"
             disabled={loading}
@@ -484,7 +631,7 @@ export const ImageStudioTool: React.FC = () => {
             {loading ? (
               <>
                 <span style={{ display: 'inline-block', animation: 'spin 1s linear infinite' }}>⏳</span>
-                正在精细绘制中 (约10-25秒)...
+                正在精细生成中 (约15-25秒)...
               </>
             ) : (
               <>
@@ -493,7 +640,7 @@ export const ImageStudioTool: React.FC = () => {
             )}
           </button>
 
-          {/* 错误提示 */}
+          {/* 错误警告 */}
           {errorMsg && (
             <div
               style={{
@@ -583,10 +730,10 @@ export const ImageStudioTool: React.FC = () => {
           >
             {loading ? (
               <div style={{ textAlign: 'center', padding: '30px' }}>
-                <div style={{ fontSize: '36px', marginBottom: '14px', animation: 'bounce 1s infinite' }}>🎨</div>
-                <div style={{ fontSize: '14px', fontWeight: 600, color: '#374151' }}>AI 神经渲染引擎正在构建光影...</div>
+                <div style={{ fontSize: '38px', marginBottom: '14px', animation: 'pulse 1.5s infinite' }}>🎨</div>
+                <div style={{ fontSize: '14px', fontWeight: 600, color: '#374151' }}>AI 渲染引擎正在实时合成画面...</div>
                 <div style={{ fontSize: '12px', color: '#9ca3af', marginTop: '6px' }}>
-                  调用原生超高清文生图模型，请稍候
+                  解析高密度光影细节与几何结构，请稍候
                 </div>
               </div>
             ) : currentImage ? (
@@ -603,7 +750,6 @@ export const ImageStudioTool: React.FC = () => {
                   }}
                 />
 
-                {/* 优化后的提示词说明 */}
                 {currentRevisedPrompt && (
                   <div
                     style={{
@@ -617,7 +763,9 @@ export const ImageStudioTool: React.FC = () => {
                     }}
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                      <span style={{ fontSize: '11px', fontWeight: 600, color: '#475569' }}>🔍 DALL-E 3 自动语义增强提示词 (Revised Prompt)</span>
+                      <span style={{ fontSize: '11px', fontWeight: 600, color: '#475569' }}>
+                        🔍 模型自动扩展提示词 (Revised Prompt)
+                      </span>
                       <button
                         type="button"
                         onClick={() => copyPrompt(currentRevisedPrompt)}
@@ -642,7 +790,9 @@ export const ImageStudioTool: React.FC = () => {
               <div style={{ textAlign: 'center', color: '#9ca3af', padding: '40px' }}>
                 <div style={{ fontSize: '42px', marginBottom: '10px' }}>🖼️</div>
                 <div style={{ fontSize: '14px', fontWeight: 500, color: '#4b5563' }}>画板已就绪，静候你的创意</div>
-                <div style={{ fontSize: '12px', marginTop: '4px' }}>在左侧填写提示词与 API Key，点击“立即生成”即可实时出图</div>
+                <div style={{ fontSize: '12px', marginTop: '4px' }}>
+                  从上方点击热门预设，或在左侧输入专属 Prompt，点击“立即生成”
+                </div>
               </div>
             )}
           </div>
@@ -651,7 +801,7 @@ export const ImageStudioTool: React.FC = () => {
           {history.length > 0 && (
             <div style={{ marginTop: '16px' }}>
               <div style={{ fontSize: '12px', fontWeight: 600, color: '#4b5563', marginBottom: '8px' }}>
-                🕒 本次绘画历史 (点击切换大图)
+                🕒 本次绘画画廊 (点击切换大图)
               </div>
               <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '4px' }}>
                 {history.map((h, i) => (
