@@ -5,6 +5,8 @@ order: 5
 
 # Planning & Orchestration in Autonomous Systems
 
+![Agent planning, execution and feedback loop](/illustrations/agent-loop.svg)
+
 For complex multi-step engineering initiatives (e.g., refactoring backend modules, tracing distributed deadlocks), single-turn inference is insufficient. **Planning & Orchestration** defines the boundary between basic chatbots and production-ready agents.
 
 ```mermaid

@@ -5,6 +5,8 @@ order: 3
 
 # 什么是 MCP（五）：Model Context Protocol 上下文协议
 
+![MCP 统一连接 AI 与工具的桥示意图](/illustrations/mcp-bridge.svg)
+
 **MCP（Model Context Protocol，模型上下文协议）** 是由 Anthropic 开源的一套开放通信标准，旨在解决 AI 模型连接异构数据源与工具时的“协议孤岛”问题。
 
 ```mermaid

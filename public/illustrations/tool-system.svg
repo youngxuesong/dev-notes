@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tool system</title><desc id="desc">A black operator turns one decision wheel to route a request into tools.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="760" cy="430" r="170"/>
+    <circle cx="760" cy="430" r="55"/>
+    <path d="M760 260 v-95 M760 600 v95 M590 430 h-95 M930 430 h95"/>
+    <path d="M980 245 l220 -85 M980 430 h260 M980 615 l220 85" stroke="#e67e22"/>
+    <path d="M1200 160 l-34 5 M1200 160 l-18 28 M1240 430 l-30 -15 M1240 430 l-30 15 M1200 700 l-18 -28 M1200 700 l-34 -5" stroke="#e67e22"/>
+    <path d="M330 420 q0 -90 90 -90 h80 q90 0 90 90 v20 q0 90 -90 90 h-80 q-90 0 -90 -90Z"/>
+    <path d="M400 420 h120" stroke="#3d78b8"/>
+  </g>
+  <g fill="#171717">
+    <path d="M700 410 C697 370 728 344 764 352 C796 359 809 389 797 418 C785 447 752 458 725 445 C712 439 703 428 700 410Z"/>
+    <path d="M720 445 l-6 63 M766 444 l8 63" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="730" cy="383" r="7" fill="#fff"/><circle cx="758" cy="383" r="7" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="36" fill="#171717">
+    <text x="310" y="280">请求</text><text x="690" y="175">判断</text><text x="1245" y="180">文件</text><text x="1280" y="445">终端</text><text x="1240" y="745">API</text>
+    <text x="640" y="770" fill="#e67e22">一次只转一个方向</text>
+  </g>
+</svg>

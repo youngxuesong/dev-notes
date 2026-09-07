@@ -4,6 +4,8 @@ title: Claude Prompt Caching 省钱与提速实战
 
 # Claude Prompt Caching 省钱与提速实战
 
+![Prompt Caching 稳定前缀与变化请求示意图](/illustrations/prompt-cache.svg)
+
 在长上下文（Long Context）的大模型交互中，**输入 Token 往往占据了 80% 以上的 API 费用**。Anthropic 推出的 **Prompt Caching（提示词缓存）** 技术能够将命中缓存的输入 Token 成本降低多达 **90%**，同时显著降低响应首字延迟（TTFT）。
 
 ```mermaid

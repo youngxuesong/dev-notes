@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Address validation</title><desc id="desc">A small black operator aligns a street address card with a map pin and a clean banking form.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M210 230 h390 v410 H210Z"/><path d="M270 320 h250 M270 390 h180 M270 460 h220" stroke="#3d78b8"/>
+    <path d="M800 270 q120 -110 240 0 q80 80 0 200 l-120 160 -120 -160 q-80 -120 0 -200Z"/>
+    <circle cx="920" cy="340" r="45" stroke="#e74c3c"/>
+    <path d="M1120 230 h300 v420 h-300Z"/><path d="M1170 320 h180 M1170 390 h180 M1170 460 h120" stroke="#e67e22"/>
+    <path d="M600 500 h190 M1040 500 h80" stroke="#e67e22"/><path d="M760 470 l35 30 -35 30 M1080 470 l-35 30 35 30" stroke="#e67e22"/>
+    <path d="M1170 570 h120" stroke="#e74c3c"/>
+  </g>
+  <g fill="#171717">
+    <path d="M735 555 C732 515 763 489 799 497 C831 504 844 534 832 563 C820 592 787 603 760 590 C747 584 738 573 735 555Z"/>
+    <path d="M755 590 l-6 64 M801 589 l8 64" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="765" cy="528" r="7" fill="#fff"/><circle cx="793" cy="528" r="7" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="36" fill="#171717">
+    <text x="260" y="180">原始地址</text><text x="835" y="205">地图核验</text><text x="1160" y="180">标准字段</text><text x="1170" y="710" fill="#e74c3c">能找到 才能通过</text>
+  </g>
+</svg>

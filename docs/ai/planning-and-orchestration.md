@@ -5,6 +5,8 @@ order: 5
 
 # 什么是规划与编排（Planning & Orchestration）
 
+![Agent 规划、执行与反馈循环示意图](/illustrations/agent-loop.svg)
+
 面对复杂的工程研发需求（如“重构一个微服务模块”或“排查分布式死锁”），单次模型推理无法直接达成目标。**规划（Planning）与编排（Orchestration）** 决定了 Agent 处理复杂长链任务的上限。
 
 ```mermaid

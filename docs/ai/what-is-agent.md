@@ -5,6 +5,8 @@ order: 2
 
 # 什么是 Agent（一）：智能体基础认知
 
+![Agent 从目标到行动的闭环示意图](/illustrations/agent-loop.svg)
+
 在大模型（LLM）从“聊天对话（Chatbot）”迈向“自主行动（Action）”的浪潮中，**Agent（智能体）** 成为了最核心的演进方向。
 
 ```mermaid

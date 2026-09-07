@@ -5,6 +5,8 @@ order: 10
 
 # Claude Code MCP 与多 Agent 协作
 
+![MCP 连接模型与外部工具的桥接示意图](/illustrations/mcp-bridge.svg)
+
 当单一 Agent 面临跨系统、跨领域的复杂交付时，**MCP 协议与多 Agent 协同（Multi-Agent Swarm）** 成为了终极解法。
 
 ```mermaid

@@ -5,6 +5,8 @@ order: 4
 
 # Hong Kong Virtual Banking: Quick Account Setup with ZA Bank
 
+![ZA Bank mobile onboarding flow](/illustrations/digital-bank.svg)
+
 ZA Bank is Hong Kong's first licensed **Virtual Bank** and currently holds the leading position in digital banking across the region with an exceptionally streamlined mobile experience.
 
 ```mermaid

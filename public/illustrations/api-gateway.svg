@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">API gateway</title><desc id="desc">Several clients pass through one hand-drawn gateway into a calm service lane.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M720 170 h170 v520 H720Z"/>
+    <path d="M250 260 h470 M250 450 h470 M250 640 h470" stroke="#e67e22"/>
+    <path d="M890 260 h430 M890 450 h430 M890 640 h430" stroke="#3d78b8"/>
+    <path d="M680 230 l40 30 -40 30 M680 420 l40 30 -40 30 M680 610 l40 30 -40 30" stroke="#e67e22"/>
+    <path d="M930 230 l-40 30 40 30 M930 420 l-40 30 40 30 M930 610 l-40 30 40 30" stroke="#3d78b8"/>
+    <path d="M1080 745 h180" stroke="#e74c3c"/>
+  </g>
+  <g fill="#171717">
+    <path d="M782 400 C779 360 810 334 846 342 C878 349 891 379 879 408 C867 437 834 448 807 435 C794 429 785 418 782 400Z"/>
+    <path d="M802 435 l-6 64 M848 434 l8 64" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="812" cy="373" r="7" fill="#fff"/><circle cx="840" cy="373" r="7" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="36" fill="#171717">
+    <text x="270" y="190">Claude</text><text x="300" y="385">Codex</text><text x="250" y="575">客户端</text><text x="755" y="120">网关</text><text x="1060" y="190" fill="#3d78b8">模型渠道</text><text x="1050" y="780" fill="#e74c3c">统一入口</text>
+  </g>
+</svg>

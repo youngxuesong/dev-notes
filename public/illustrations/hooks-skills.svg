@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hooks and skills</title><desc id="desc">A small black operator pulls a hook through a reusable skill card.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M250 540 C420 390 560 390 690 510 S950 650 1120 500"/>
+    <path d="M1120 500 q140 -100 245 15" stroke="#e67e22"/>
+    <path d="M330 270 q0 -70 70 -70 h290 q70 0 70 70 v210 q0 70 -70 70 H400 q-70 0 -70 -70Z"/>
+    <path d="M420 310 h180 M420 365 h260 M420 420 h140" stroke="#3d78b8"/>
+    <path d="M1170 250 q70 -55 135 10 q58 60 -6 115 q-72 62 -144 -8" stroke="#e74c3c"/>
+    <path d="M1260 365 v175" stroke="#e74c3c"/>
+  </g>
+  <g fill="#171717">
+    <path d="M685 482 C682 440 715 415 752 424 C783 431 797 461 785 491 C772 521 738 532 710 518 C696 511 688 500 685 482Z"/>
+    <path d="M706 518 l-6 65 M754 516 l8 64" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="716" cy="455" r="7" fill="#fff"/><circle cx="746" cy="455" r="7" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="36" fill="#171717">
+    <text x="415" y="160">可复用动作</text><text x="1160" y="210" fill="#e74c3c">触发</text>
+    <text x="1090" y="650" fill="#e67e22">交接</text><text x="205" y="650" fill="#3d78b8">上下文</text>
+  </g>
+</svg>

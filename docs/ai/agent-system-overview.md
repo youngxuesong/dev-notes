@@ -5,6 +5,8 @@ order: 6
 
 # Agent 系统全景架构设计
 
+![Agent 系统从目标到反馈的循环示意图](/illustrations/agent-loop.svg)
+
 综合现代工业级 Agent（如 Claude Code、Devin、Pi）的演进，一个健壮的自主智能体系统由以下五层架构构成：
 
 ```mermaid

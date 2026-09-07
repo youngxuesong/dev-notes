@@ -5,6 +5,8 @@ order: 11
 
 # Inside Claude Code: Architectural Execution Pipeline
 
+![Claude Code architecture from terminal to execution](/illustrations/claude-architecture.svg)
+
 Tracing the underlying mechanics of Claude Code reveals a modular **7-stage execution lifecycle**:
 
 ```mermaid

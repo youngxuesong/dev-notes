@@ -5,6 +5,8 @@ order: 3
 
 # Hong Kong Tier-1 Banking: HSBC vs Bank of China (BOCHK)
 
+![HSBC and BOCHK comparison by use case](/illustrations/bank-compare.svg)
+
 As the two preeminent note-issuing institutions in Hong Kong, **HSBC HK (HSBC One)** and **Bank of China Hong Kong (BOCHK)** serve as the bedrock infrastructure for global developers, remote workers, and cross-border investors.
 
 ```mermaid

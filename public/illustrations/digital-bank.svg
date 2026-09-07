@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Digital bank onboarding</title><desc id="desc">A small black operator carries an identity card through a phone-shaped doorway into a digital bank.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="620" y="150" width="360" height="560" rx="42"/>
+    <path d="M700 250 h200 M700 330 h200 M700 410 h130" stroke="#3d78b8"/>
+    <circle cx="800" cy="550" r="75"/><path d="M760 550 h80 M800 510 v80" stroke="#e67e22"/>
+    <path d="M250 500 h330" stroke="#e67e22"/><path d="M545 470 l35 30 -35 30" stroke="#e67e22"/>
+    <path d="M1040 500 h320" stroke="#3d78b8"/><path d="M1040 470 l-35 30 35 30" stroke="#3d78b8"/>
+    <path d="M690 770 h220" stroke="#e74c3c"/>
+  </g>
+  <g fill="#171717">
+    <path d="M485 460 C482 420 513 394 549 402 C581 409 594 439 582 468 C570 497 537 508 510 495 C497 489 488 478 485 460Z"/>
+    <path d="M505 495 l-6 64 M551 494 l8 64" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="515" cy="433" r="7" fill="#fff"/><circle cx="543" cy="433" r="7" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="38" fill="#171717">
+    <text x="255" y="430">证件</text><text x="700" y="115">手机开户</text><text x="1100" y="430" fill="#3d78b8">账户已开</text><text x="690" y="830" fill="#e74c3c">几分钟 但要合规</text>
+  </g>
+</svg>

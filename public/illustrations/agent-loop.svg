@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Agent loop</title><desc id="desc">A small black operator moves a goal through thought, tools and feedback.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M210 445 C330 225 595 180 790 315 C960 430 1040 675 1285 610"/>
+    <path d="M1235 565 l55 45 -72 12" stroke="#e67e22"/>
+    <path d="M790 315 C700 395 700 505 790 585 C880 505 880 395 790 315Z"/>
+    <path d="M1080 250 C1145 205 1260 215 1310 285 C1365 365 1315 465 1220 490 C1125 515 1035 445 1038 350 C1040 305 1050 275 1080 250Z"/>
+    <path d="M305 630 C410 650 520 650 620 625" stroke="#e74c3c"/>
+    <path d="M405 640 l-30 -32 M455 644 l-5 -45 M510 642 l24 -36"/>
+  </g>
+  <g fill="#171717">
+    <path d="M163 475 C160 422 200 385 248 395 C280 402 295 435 281 470 C268 503 230 520 194 507 C176 501 165 490 163 475Z"/>
+    <path d="M194 505 l-8 70 M250 502 l10 68" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="205" cy="440" r="8" fill="#fff"/><circle cx="243" cy="438" r="8" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="34" fill="#171717">
+    <text x="112" y="350">目标</text><text x="720" y="250">判断</text><text x="1135" y="180">工具</text><text x="1310" y="650" fill="#e67e22">反馈</text>
+    <text x="300" y="710" fill="#e74c3c">不是一次回答</text><text x="690" y="670" fill="#3d78b8">继续观察</text>
+  </g>
+</svg>

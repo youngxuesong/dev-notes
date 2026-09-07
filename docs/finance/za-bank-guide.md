@@ -5,6 +5,8 @@ order: 4
 
 # 港银行开户没你想的麻烦：ZA Bank 几分钟申请实录
 
+![ZA Bank 手机开户流程示意图](/illustrations/digital-bank.svg)
+
 众安银行（ZA Bank）是香港首家获发牌照并正式营业的**虚拟银行（Virtual Bank）**，也是目前香港规模最大、体验最顺畅的线上银行之一。
 
 ```mermaid

@@ -5,6 +5,8 @@ order: 8
 
 # CLAUDE.md, Custom Skills & Hooks in Practice
 
+![How CLAUDE.md, Skills and Hooks work together](/illustrations/hooks-skills.svg)
+
 Within the Claude Code ecosystem, **`CLAUDE.md`**, **Skills**, and **Hooks** form the tripartite engine for tailoring autonomous agents to specific software repositories.
 
 ```mermaid

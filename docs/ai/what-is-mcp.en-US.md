@@ -5,6 +5,8 @@ order: 3
 
 # Understanding Model Context Protocol (MCP)
 
+![MCP as a bridge between AI and tools](/illustrations/mcp-bridge.svg)
+
 **Model Context Protocol (MCP)**, open-sourced by Anthropic, is an open standard designed to seamlessly connect AI models with external tools, APIs, and isolated data repositories.
 
 ```mermaid

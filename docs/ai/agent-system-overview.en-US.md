@@ -5,6 +5,8 @@ order: 6
 
 # The Grand Architecture of Modern Agent Systems
 
+![Agent system loop from goal to feedback](/illustrations/agent-loop.svg)
+
 Synthesizing production-grade agent runtimes (such as Claude Code, Pi, and Devin), a resilient autonomous system comprises a five-tier decoupled architecture:
 
 ```mermaid

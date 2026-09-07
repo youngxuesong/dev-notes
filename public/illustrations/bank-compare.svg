@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Bank comparison</title><desc id="desc">A small black operator balances two bank buildings on a hand-drawn scale.</desc>
+  <rect width="1600" height="900" fill="#fff"/>
+  <g fill="none" stroke="#171717" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M800 190 v470 M620 300 h360 M800 190 l-220 110 M800 190 l220 110"/>
+    <path d="M480 300 v190 q160 90 320 0 V300 M800 300 v190 q160 90 320 0 V300"/>
+    <path d="M540 700 h520" stroke="#e67e22"/>
+    <path d="M540 700 l-40 40 M1060 700 l40 40" stroke="#e67e22"/>
+    <path d="M580 360 h160 M860 360 h160" stroke="#3d78b8"/>
+  </g>
+  <g fill="#171717">
+    <path d="M760 430 C757 390 788 364 824 372 C856 379 869 409 857 438 C845 467 812 478 785 465 C772 459 763 448 760 430Z"/>
+    <path d="M780 465 l-6 64 M826 464 l8 64" fill="none" stroke="#171717" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="790" cy="403" r="7" fill="#fff"/><circle cx="818" cy="403" r="7" fill="#fff"/>
+  </g>
+  <g font-family="Arial, 'Microsoft YaHei', sans-serif" font-size="38" fill="#171717">
+    <text x="530" y="265">汇丰</text><text x="950" y="265">中银香港</text><text x="650" y="810" fill="#e67e22">看使用场景</text><text x="1180" y="600" fill="#3d78b8">没有绝对赢家</text>
+  </g>
+</svg>

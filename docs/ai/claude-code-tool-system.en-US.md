@@ -5,6 +5,8 @@ order: 9
 
 # The Claude Code Tool Execution Subsystem
 
+![Claude Code tool selection and execution](/illustrations/tool-system.svg)
+
 The efficacy of Claude Code relies heavily on its refined **Native Tool Subsystem**, engineered specifically for repository manipulation and deterministic execution.
 
 ```mermaid
