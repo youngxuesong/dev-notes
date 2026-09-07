@@ -4,18 +4,18 @@ export default defineConfig({
   metas: [
     {
       name: 'keywords',
-      content: 'AI Agent, Claude Code, OpenAI Codex, CC Switch, LLM Gateway, 境外银行开户, 香港汇丰, 中银香港, 跨境金融, 全栈开发',
+      content: 'AI Agent, Claude Code, OpenAI Codex, AI Image Generator, DALL-E 3, Flux, CC Switch, LLM Gateway, 境外银行开户, 香港汇丰, 中银香港, 跨境金融, 全栈开发',
     },
     {
       name: 'description',
-      content: 'DevNotes - 全栈开发者的数字花园，专注于 AI Agent 实战架构、Claude Code 与 Codex 工具链接入、高可用系统工程及港澳跨境金融出海指南。',
+      content: 'DevNotes - 全栈开发者的数字花园，专注于 AI Agent 实战架构、AI 生图工坊 (DALL-E 3 / Flux 在线生图)、Claude Code 与 Codex 工具链接入、高可用系统工程及港澳跨境金融出海指南。',
     },
     { property: 'og:site_name', content: 'DevNotes' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'DevNotes - AI Agent & System Engineering & Cross-Border Finance' },
+    { property: 'og:title', content: 'DevNotes - AI Agent & AI Image Studio & System Engineering' },
     {
       property: 'og:description',
-      content: '全栈开发者的实战笔记：深入拆解 Claude Code、Agent 架构、LLM 网关与境外金融闭环。',
+      content: '全栈开发者的实战笔记：在线 AI 生图工作台、深入拆解 Claude Code、Agent 架构与境外金融闭环。',
     },
   ],
   themeConfig: {
@@ -24,12 +24,14 @@ export default defineConfig({
     nav: {
       'zh-CN': [
         { title: '🤖 AI 实验室', link: '/ai' },
+        { title: '🎨 AI 生图工坊', link: '/ai/image-studio' },
         { title: '🛠️ 系统工程', link: '/engineering' },
         { title: '💳 跨境金融', link: '/finance' },
         { title: '👨‍💻 关于我', link: '/about' },
       ],
       'en-US': [
         { title: '🤖 AI Lab', link: '/en-US/ai' },
+        { title: '🎨 Image Studio', link: '/en-US/ai/image-studio' },
         { title: '🛠️ Engineering', link: '/en-US/engineering' },
         { title: '💳 Finance', link: '/en-US/finance' },
         { title: '👨‍💻 About', link: '/en-US/about' },
