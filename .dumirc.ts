@@ -24,14 +24,14 @@ export default defineConfig({
     nav: {
       'zh-CN': [
         { title: '🤖 AI 实验室', link: '/ai' },
-        { title: '🎨 AI 生图工坊', link: '/ai/image-studio' },
+        { title: '🧰 在线工具箱', link: '/tools' },
         { title: '🛠️ 系统工程', link: '/engineering' },
         { title: '💳 跨境金融', link: '/finance' },
         { title: '👨‍💻 关于我', link: '/about' },
       ],
       'en-US': [
         { title: '🤖 AI Lab', link: '/en-US/ai' },
-        { title: '🎨 Image Studio', link: '/en-US/ai/image-studio' },
+        { title: '🧰 Tools', link: '/en-US/tools' },
         { title: '🛠️ Engineering', link: '/en-US/engineering' },
         { title: '💳 Finance', link: '/en-US/finance' },
         { title: '👨‍💻 About', link: '/en-US/about' },

@@ -8,7 +8,7 @@ order: 12
 :::info 导读
 在 AI 图像生成从“玩具尝鲜”走向“工业化交付”的今天，靠玄学撞运气随机拼凑单词已无法满足高标准的商业需求。本文基于开源社区前沿经验（如 `awesome-gpt-image-2`）与生产级落地实践，深入拆解 **高可控、高质感、强表现力的 AI 生图提示词组织架构与调优秘籍**。
 
-👉 **配套实战工具**：你可以在本站的 [🎨 AI 生图工坊 (Image Studio)](/ai/image-studio) 实时测试本文所有提示词公式。
+👉 **配套实战工具**：你可以在独立标签页的 [🧰 在线工具箱 · AI 生图工坊](/tools/image-studio) 实时测试本文所有提示词公式。
 :::
 
 ---
@@ -127,7 +127,7 @@ Luminous lens flares, vibrant saturated colors, nostalgic and poetic atmosphere,
 
 ## 五、立即上手体验
 
-理论结合实战才能产生生产力。我们在本站提供了开箱即用的 **[🎨 AI 生图工坊 (Image Studio)](/ai/image-studio)**：
+理论结合实战才能产生生产力。我们在本站独立工具箱提供了开箱即用的 **[🧰 在线工具箱 · AI 生图工坊](/tools/image-studio)**：
 - 无需安装 Python、ComfyUI 或下载几十 GB 的显卡模型；
 - 填入你现有的 API Key 即可在浏览器端安全调用，零隐私上传；
 - 预置上述所有工业级场景公式，一键填入并微调参数。

@@ -8,7 +8,7 @@ order: 12
 :::info Overview
 As AI vision synthesis evolves from random experimentation into industrial pipelines, loose keyword stacking no longer meets commercial benchmarks. Based on community insights (such as `awesome-gpt-image-2`) and real-world production cases, this guide deconstructs the **five-tier structural prompt architecture** for high-fidelity generative imagery.
 
-👉 **Hands-On Tool**: Test every prompt formula in this article inside our [🎨 AI Image Studio](/en-US/ai/image-studio).
+👉 **Hands-On Tool**: Test every prompt formula in this article inside our dedicated [🧰 Online Toolbox · AI Image Studio](/en-US/tools/image-studio).
 :::
 
 ---
@@ -86,7 +86,7 @@ ambient occlusion, Pop Mart collectible aesthetic, Octane 3D render.
 
 ## 4. Try It Hands-On
 
-Turn theory into real assets. Launch our browser-based **[🎨 AI Image Studio](/en-US/ai/image-studio)**:
+Turn theory into real assets. Launch our browser-based **[🧰 Online Toolbox · AI Image Studio](/en-US/tools/image-studio)**:
 - Zero local setup or GPU configuration required;
 - Direct, client-side API requests under the BYOK (Bring Your Own Key) model;
 - One-click presets and dynamic aspect ratio switching.

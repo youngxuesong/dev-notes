@@ -26,9 +26,8 @@ graph TD
         I --> J[10. Claude Code 内部架构剖析]
     end
 
-    subgraph Vision_Engineering [第四部分：视觉生成与生图工程]
+    subgraph Vision_Engineering [第四部分：视觉生成与提示词工程]
         K --> L[12. 工业级 AI 生图提示词工程实战]
-        L --> M[🎨 在线 AI 生图工坊 Image Studio]
     end
 ```
 
@@ -65,4 +64,4 @@ graph TD
 ## 🎨 第四部分：视觉生成与提示词工程
 
 - [12. 工业级 AI 生图提示词工程实战指南 (DALL-E 3 & Flux)](/ai/prompt-engineering-guide)
-- [13. 🎨 在线体验：AI 生图工坊 (Image Studio)](/ai/image-studio)
+- 👉 **实战配套工具**：欢迎在独立的 [🧰 在线工具箱 · AI 生图工坊](/tools/image-studio) 中进行实时调参演练。
