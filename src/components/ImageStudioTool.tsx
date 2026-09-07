@@ -140,11 +140,37 @@ export const ImageStudioTool: React.FC = () => {
 
   // 运行状态
   const [loading, setLoading] = useState<boolean>(false);
+  const [elapsedTime, setElapsedTime] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string | null>(null);
   const [currentRevisedPrompt, setCurrentRevisedPrompt] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [history, setHistory] = useState<Array<{ url: string; prompt: string; size: string; time: string }>>([]);
   const [copied, setCopied] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  // 监听屏幕宽度以实现完美自适应
+  useEffect(() => {
+    const checkWidth = () => {
+      setIsMobile(window.innerWidth < 860);
+    };
+    checkWidth();
+    window.addEventListener('resize', checkWidth);
+    return () => window.removeEventListener('resize', checkWidth);
+  }, []);
+
+  // 生成中计时器
+  useEffect(() => {
+    let timer: any;
+    if (loading) {
+      setElapsedTime(0);
+      timer = setInterval(() => {
+        setElapsedTime((prev) => prev + 1);
+      }, 1000);
+    } else {
+      clearInterval(timer);
+    }
+    return () => clearInterval(timer);
+  }, [loading]);
 
   // 初始化读取本地缓存的 Key 和 BaseUrl
   useEffect(() => {
@@ -274,6 +300,34 @@ export const ImageStudioTool: React.FC = () => {
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  // 跨端安全下载函数（兼容 Base64 与跨域 URL）
+  const handleDownload = async (url: string) => {
+    try {
+      if (url.startsWith('data:')) {
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `ai-generated-${Date.now()}.png`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        const resp = await fetch(url);
+        const blob = await resp.blob();
+        const blobUrl = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = `ai-generated-${Date.now()}.png`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(blobUrl);
+      }
+    } catch (e) {
+      // 降级新窗口打开
+      window.open(url, '_blank');
+    }
   };
 
   return (
@@ -410,17 +464,17 @@ export const ImageStudioTool: React.FC = () => {
         </div>
       </div>
 
-      {/* 主体工作台：左侧参数，右侧画布 */}
+      {/* 主体工作台：自适应左右/上下布局 */}
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'minmax(320px, 420px) 1fr',
-          gap: '16px',
+          gridTemplateColumns: isMobile ? '1fr' : 'minmax(320px, 420px) 1fr',
+          gap: '18px',
           background: '#f9fafb',
           border: '1px solid #e5e7eb',
           borderTop: 'none',
           borderRadius: '0 0 12px 12px',
-          padding: '20px',
+          padding: isMobile ? '14px' : '20px',
           minHeight: '620px',
         }}
       >
@@ -589,7 +643,22 @@ export const ImageStudioTool: React.FC = () => {
             </div>
 
             <div>
-              <div style={{ fontSize: '11px', color: '#6b7280', marginBottom: '3px' }}>API Key (令牌)</div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '3px' }}>
+                <span style={{ fontSize: '11px', color: '#6b7280' }}>API Key (令牌)</span>
+                <a
+                  href="https://wzyp.cn/shop/ZW3KTBHW"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    fontSize: '11px',
+                    color: '#2563eb',
+                    textDecoration: 'none',
+                    fontWeight: 500,
+                  }}
+                >
+                  ⚡ 获取生图专属 Key ↗
+                </a>
+              </div>
               <div style={{ position: 'relative' }}>
                 <input
                   type={showKey ? 'text' : 'password'}
@@ -661,7 +730,7 @@ export const ImageStudioTool: React.FC = () => {
             {loading ? (
               <>
                 <span style={{ display: 'inline-block', animation: 'spin 1s linear infinite' }}>⏳</span>
-                正在精细生成中 (约15-25秒)...
+                正在精细生成 ({elapsedTime}s) · 神经渲染中...
               </>
             ) : (
               <>
@@ -721,23 +790,22 @@ export const ImageStudioTool: React.FC = () => {
 
             {currentImage && (
               <div style={{ display: 'flex', gap: '8px' }}>
-                <a
-                  href={currentImage}
-                  target="_blank"
-                  rel="noreferrer"
-                  download="ai-generated.png"
+                <button
+                  type="button"
+                  onClick={() => handleDownload(currentImage)}
                   style={{
                     fontSize: '12px',
-                    padding: '4px 10px',
+                    padding: '5px 12px',
                     borderRadius: '6px',
                     background: '#10b981',
                     color: '#fff',
-                    textDecoration: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
                     fontWeight: 500,
                   }}
                 >
                   ⬇️ 下载高清原图
-                </a>
+                </button>
               </div>
             )}
           </div>
