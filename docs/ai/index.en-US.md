@@ -26,8 +26,9 @@ graph TD
         I --> J[10. Internal Architecture Deep Dive]
     end
 
-    subgraph Optimization [Part 3: Cost & Performance Tuning]
-        J --> K[11. Claude Prompt Caching in Practice]
+    subgraph Vision_Engineering [Part 4: Generative Vision & Tooling]
+        K --> L[12. Production-Grade Prompt Engineering]
+        L --> M[🎨 Online AI Image Studio]
     end
 ```
 
@@ -56,3 +57,10 @@ graph TD
 ## ⚡ Part 3: Cost & Performance Optimization
 
 - [11. Optimizing Claude API with Prompt Caching](/en-US/ai/claude-prompt-caching)
+
+---
+
+## 🎨 Part 4: Generative Vision & Prompt Engineering
+
+- [12. Production-Grade Prompt Engineering for Generative Vision](/en-US/ai/prompt-engineering-guide)
+- [13. 🎨 Interactive Tool: AI Image Studio](/en-US/ai/image-studio)

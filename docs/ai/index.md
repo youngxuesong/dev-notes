@@ -26,8 +26,9 @@ graph TD
         I --> J[10. Claude Code 内部架构剖析]
     end
 
-    subgraph Optimization [第三部分：成本与性能调优]
-        J --> K[11. Claude Prompt Caching 省钱实战]
+    subgraph Vision_Engineering [第四部分：视觉生成与生图工程]
+        K --> L[12. 工业级 AI 生图提示词工程实战]
+        L --> M[🎨 在线 AI 生图工坊 Image Studio]
     end
 ```
 
@@ -58,3 +59,10 @@ graph TD
 ## ⚡ 第三部分：成本与性能优化
 
 - [11. Claude Prompt Caching 省钱与提速实战](/ai/claude-prompt-caching)
+
+---
+
+## 🎨 第四部分：视觉生成与提示词工程
+
+- [12. 工业级 AI 生图提示词工程实战指南 (DALL-E 3 & Flux)](/ai/prompt-engineering-guide)
+- [13. 🎨 在线体验：AI 生图工坊 (Image Studio)](/ai/image-studio)
