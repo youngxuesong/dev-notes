@@ -3,16 +3,6 @@ title: AI Image Studio (Online DALL-E 3 & Flux Workspace)
 order: 10
 ---
 
-# 🎨 AI Image Studio (BYOK Web Workspace)
-
-:::info Overview
-**AI Image Studio** is a pure client-side image generation workspace designed for creators and engineers under the **BYOK (Bring Your Own Key)** model. Curated and adapted from the popular **Awesome GPT Image 2** prompt database, you can generate production-ready visuals via DALL-E 3, Flux, or any OpenAI-compatible image endpoint right from your browser.
-
-- **Curated High-Impact Presets**: Industrial exploded diagrams, golden-hour portraits, 3D collectible toys, and commercial still lifes.
-- **Client-Side Only**: Your API key and base URL are kept strictly inside your browser's LocalStorage.
-- **Dynamic Aspect Ratio Sync**: Automatically matches recommended aspect ratios (1:1 / 16:9 / 9:16) per preset style.
-:::
-
 <ImageStudioTool />
 
 ---
