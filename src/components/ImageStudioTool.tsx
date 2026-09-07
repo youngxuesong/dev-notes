@@ -111,11 +111,26 @@ const ASPECT_OPTIONS: AspectOption[] = [
   { label: '9:16 竖屏', ratio: '9:16', size: '1024x1792', desc: '手机壁纸 / 真实人像' },
 ];
 
+export interface ModelOption {
+  id: string;
+  name: string;
+  desc: string;
+  recommended?: boolean;
+}
+
+// 线上生产网关当前已实际支持的生图模型列表
+export const AVAILABLE_MODELS: ModelOption[] = [
+  { id: 'gpt-image-2', name: 'GPT Image 2 (最新推荐)', desc: '次世代高精度文本排版与光影一致性', recommended: true },
+  { id: 'gpt-image-1.5', name: 'GPT Image 1.5', desc: '高速高质感平衡生图模型' },
+  { id: 'gpt-image-1', name: 'GPT Image 1 (标准版)', desc: '基础稳定多模态图像生成' },
+  { id: 'dall-e-3', name: 'DALL-E 3 (OpenAI 兼容)', desc: '经典强语义理解与自动提示词增强' },
+];
+
 export const ImageStudioTool: React.FC = () => {
   // 控制参数
   const [prompt, setPrompt] = useState<string>(CURATED_PRESETS[0].items[0].prompt);
   const [selectedSize, setSelectedSize] = useState<string>('1792x1024');
-  const [model, setModel] = useState<string>('dall-e-3');
+  const [model, setModel] = useState<string>(AVAILABLE_MODELS[0].id);
   const [quality, setQuality] = useState<'standard' | 'hd'>('standard');
   const [baseUrl, setBaseUrl] = useState<string>('https://vibecoding.kuyiduo.hidns.vip');
   const [apiKey, setApiKey] = useState<string>('');
@@ -479,25 +494,38 @@ export const ImageStudioTool: React.FC = () => {
           </div>
 
           {/* 模型与画质 */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '10px' }}>
             <div>
-              <label style={{ fontSize: '12px', fontWeight: 600, color: '#374151', display: 'block', marginBottom: '4px' }}>
-                🤖 模型 (Model)
-              </label>
-              <input
-                type="text"
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+                <label style={{ fontSize: '12px', fontWeight: 600, color: '#374151' }}>
+                  🤖 生图模型 (Model)
+                </label>
+                <span style={{ fontSize: '10px', color: '#059669', background: '#ecfdf5', padding: '1px 4px', borderRadius: '3px' }}>
+                  已实装
+                </span>
+              </div>
+              <select
                 value={model}
                 onChange={(e) => setModel(e.target.value)}
-                placeholder="dall-e-3"
                 style={{
                   width: '100%',
-                  padding: '6px 10px',
+                  padding: '7px 8px',
                   borderRadius: '6px',
                   border: '1px solid #d1d5db',
                   fontSize: '12px',
+                  background: '#fff',
                   boxSizing: 'border-box',
+                  outline: 'none',
+                  fontWeight: 500,
+                  color: '#1f2937',
                 }}
-              />
+              >
+                {AVAILABLE_MODELS.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.name}
+                  </option>
+                ))}
+              </select>
             </div>
             <div>
               <label style={{ fontSize: '12px', fontWeight: 600, color: '#374151', display: 'block', marginBottom: '4px' }}>
@@ -508,16 +536,18 @@ export const ImageStudioTool: React.FC = () => {
                 onChange={(e) => setQuality(e.target.value as any)}
                 style={{
                   width: '100%',
-                  padding: '6px 10px',
+                  padding: '7px 8px',
                   borderRadius: '6px',
                   border: '1px solid #d1d5db',
                   fontSize: '12px',
                   background: '#fff',
                   boxSizing: 'border-box',
+                  outline: 'none',
+                  color: '#1f2937',
                 }}
               >
-                <option value="standard">Standard (标准模式)</option>
-                <option value="hd">HD (超清细节渲染)</option>
+                <option value="standard">Standard (标准)</option>
+                <option value="hd">HD (超清精细)</option>
               </select>
             </div>
           </div>
