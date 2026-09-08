@@ -24,7 +24,7 @@ graph LR
 ```
 
 1. **Install Client**: Download and install Codex desktop or CLI, verify local execution;
-2. **Obtain API Key**: Sign in to the console, navigate to API Keys, and generate a new key;
+2. **Obtain API Key**: Sign in to the [Sub2API Console](https://vibecoding.kuyiduo.hidns.vip), navigate to [API Tokens](https://vibecoding.kuyiduo.hidns.vip/tokens) to generate a new key (or get credits via [Instant Store](https://wzyp.cn/shop/ZW3KTBHW));
 3. **Import Configuration**: Use CCSwitch one-click import, Cockpit, or manual `config.toml` settings.
 
 ---
@@ -70,7 +70,7 @@ codex
 
 ### Import Steps
 1. Launch CCSwitch;
-2. Copy your API Key from the platform dashboard;
+2. Copy your API Key from [Sub2API Tokens Dashboard](https://vibecoding.kuyiduo.hidns.vip/tokens);
 3. In CCSwitch, add a new Provider:
    - **Provider Name**: Custom (e.g. `Sub2API`)
    - **Base URL**: `https://vibecoding.kuyiduo.hidns.vip/v1` (**Must end with lowercase `/v1`**)
@@ -95,7 +95,7 @@ The Base URL must end with lowercase `/v1`. Omitting `/v1` or using uppercase `/
 1. **Add Account**: Open Cockpit Tools, navigate to Codex Accounts, click the top-right **`+`** button;
 2. **Select Custom Provider**: Choose **API Key**, set provider to **Custom** (Do not select official OAuth);
 3. **Fill Credentials**:
-   - **API Key**: Enter your `sk-...` token
+   - **API Key**: Enter your `sk-...` token from the [Dashboard](https://vibecoding.kuyiduo.hidns.vip/tokens)
    - **Base URL**: `https://vibecoding.kuyiduo.hidns.vip/v1`
    - **Model**: `gpt-5.6-luna`
 4. **Start & Connect**: Save and click the **Start Arrow** on the account card. Once status indicates "running", connection is established.

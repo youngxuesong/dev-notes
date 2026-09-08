@@ -24,7 +24,7 @@ graph LR
 ```
 
 1. **安装客户端**：下载安装 Codex 桌面版，确保本机正常运行；
-2. **准备 API Key**：登录控制台，在 API 密钥页面创建并复制专属 Key；
+2. **准备 API Key**：登录 [API 控制台](https://vibecoding.kuyiduo.hidns.vip)，进入 [API 密钥管理页面](https://vibecoding.kuyiduo.hidns.vip/tokens) 创建并复制专属 Key（如果没有 Key，也可通过 [在线充值发卡站](https://wzyp.cn/shop/ZW3KTBHW) 快速获取）；
 3. **导入配置**：使用 CCSwitch 一键导入，或在 Cockpit / `config.toml` 填入 Base URL 与 Key。
 
 ---
@@ -70,7 +70,7 @@ codex
 
 ### 导入操作步骤
 1. 确认本机已安装并能正常打开 CCSwitch；
-2. 登录平台控制台，进入 **API 密钥** 页面，复制生成的专属 API Key；
+2. 登录 [Sub2API 控制台](https://vibecoding.kuyiduo.hidns.vip)，进入 [API 密钥](https://vibecoding.kuyiduo.hidns.vip/tokens) 页面，复制生成的专属 API Key；
 3. 在 CCSwitch 中点击添加服务商：
    - **服务商名称**：自定义（如 `Sub2API`）
    - **API Base URL**：`https://vibecoding.kuyiduo.hidns.vip/v1`（**注意：必须以小写 `/v1` 结尾**）
@@ -95,7 +95,7 @@ Base URL 必须严格以 `/v1` 结尾。漏填 `/v1`、误写成大写 `/V1` 或
 1. **添加账号**：启动 Cockpit Tools，进入 Codex 账号页，点击右上角 **`+`** 号；
 2. **选择自定义 API**：在类型窗口选择 **API Key**，服务提供商选择 **自定义 (Custom)**，切勿选择官方 OAuth 登录；
 3. **填入网关凭据**：
-   - **API Key**：填入生成的 `sk-...` 令牌
+   - **API Key**：填入在 [控制台密钥页](https://vibecoding.kuyiduo.hidns.vip/tokens) 生成的 `sk-...` 令牌
    - **基础地址 (Base URL)**：`https://vibecoding.kuyiduo.hidns.vip/v1`
    - **模型名**：填入 `gpt-5.6-luna`
 4. **启动并连接**：保存配置后回到账号卡片，点击底部的 **启动箭头**，卡片状态切换为“运行中”即表示接管成功。
