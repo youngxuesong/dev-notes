@@ -40,22 +40,7 @@ graph TD
 
 ---
 
-## 2. Eight Core Case Studies Dissected
-
-| # | Case Study | Creator | Technical Stack | Highlights & Deliverables |
-| :--- | :--- | :--- | :--- | :--- |
-| **01** | **2030 AI Workday Interactive SPA** | Indie Dev | React + Tailwind + Framer Motion | Generated a clean, responsive SPA with role tabs, timeline, and task-delegation drawers from a single prompt. |
-| **02** | **1-Minute Animated Educational Video** | Creator | Code-Driven Video (Remotion) + TTS | Complete script, dynamic infographics, and voiceover synchronization rendered in under 10 minutes. |
-| **03** | **Interactive 3D Little Planet** | Matthew Berman | WebGL / Three.js + Radial Gravity | WASD-controlled 3D character exploring a mini-planet, complete with water physics and stance adaptation. |
-| **04** | **3D SimCity (New Haven)** | Matthew Berman | Three.js + A* Pathfinding + InstancedMesh | Interactive city sandbox with zoned districts (residential, commercial, industrial), pedestrian agents, and building placement. |
-| **05** | **Library of Alexandria Walkthrough** | Ethan Mollick (Wharton) | Three.js + Spatial Proximity Triggers + Realtime Audio | Reconstructed the 250 BCE ancient library with an ambient AI historical docent providing live spoken commentary. |
-| **06** | **Autonomous Personal AI Wiki** | Ethan Mollick | 4-Day 21-Hour Agent Daemon + Bi-directional Markdown | Ingested tens of thousands of emails, papers, and calendars to produce a networked wiki with twice-daily predictive briefings. |
-| **07** | **600-Agent Autonomous Ecosystem** | Matt Shumer | ECS Architecture + Spatial Hash Grid + Embodied LLMs | 600 embodied AI citizens autonomously foraging, surviving, and engaging in spoken conversations upon meeting. |
-| **08** | **Blender Palace of Fine Arts** | Sharif Shameem | Blender Python API (`bpy`) Procedural Modeling | Single script generating Roman rotunda, 16 Corinthian peripteral columns, reflecting pool, and sunset lighting. |
-
----
-
-## 3. Hands-on Reproduction Tutorials
+## 2. Hands-on Reproduction Tutorials
 
 You don't need closed access to begin. Using the configured system prompts and standard toolchains below, you can reproduce these projects on your local machine today.
 
@@ -213,7 +198,7 @@ print("Wiki updated successfully!")
 
 ---
 
-## 4. Key Takeaways
+## 3. Key Takeaways
 
 The fundamental shift demonstrated by GPT-6 is that **the cost of generating complex code, 3D geometry, and long-running autonomous workflows is converging toward zero**. 
 
