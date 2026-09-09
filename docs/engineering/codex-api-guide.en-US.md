@@ -1,6 +1,6 @@
 ---
 title: Codex & Unified API Integration Guide
-order: 1
+order: 2
 ---
 
 # 🚀 Getting Started with Codex & Unified API Gateway

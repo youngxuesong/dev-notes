@@ -23,7 +23,6 @@ export default defineConfig({
     logo: false,
     nav: {
       'zh-CN': [
-        { title: '📖 接入文档', link: '/codex-docs' },
         { title: '🤖 AI 实验室', link: '/ai' },
         { title: '🧰 在线工具箱', link: '/tools' },
         { title: '🛠️ 系统工程', link: '/engineering' },
@@ -31,7 +30,6 @@ export default defineConfig({
         { title: '👨‍💻 关于我', link: '/about' },
       ],
       'en-US': [
-        { title: '📖 Docs', link: '/en-US/codex-docs' },
         { title: '🤖 AI Lab', link: '/en-US/ai' },
         { title: '🧰 Tools', link: '/en-US/tools' },
         { title: '🛠️ Engineering', link: '/en-US/engineering' },

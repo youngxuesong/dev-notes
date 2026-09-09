@@ -1,6 +1,6 @@
 ---
 title: Codex 与统一 API 接入全指南
-order: 1
+order: 2
 ---
 
 # 🚀 从安装 Codex 开始接入 API 网关
