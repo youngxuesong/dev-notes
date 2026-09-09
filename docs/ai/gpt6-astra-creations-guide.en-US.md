@@ -1,5 +1,5 @@
 ---
-title: GPT-6 Astra Virtual Creation Guide (8 Cases & Hands-on Implementation)
+title: GPT-6 Astra Virtual Creation Guide (4 Scenarios Hands-on Implementation)
 order: 13
 ---
 
@@ -9,7 +9,7 @@ order: 13
 In the evolution of AI, the leap from simple text conversations and basic code completions to **spatial geometry construction and long-horizon autonomous creation** marks a watershed moment for next-generation intelligence.
 OpenAI's latest model, **GPT-6 Astra**, demonstrates breakthrough performance in 3D spatial perception (BenchCAD 90.9%), full-stack code synthesis (SWE 74.1%), and autonomous long-running agents.
 
-Based on industry benchmarks and 8 prominent real-world applications, this guide dissects the underlying engineering workflows. It provides **step-by-step, zero-threshold, reproducible tutorials** for four flagship projects: **Interactive 3D Little Planet**, **Blender Scripted Landmark Reconstruction**, **Remotion Code-Driven Explainer Video**, and a **Long-running Autonomous Personal AI Wiki**.
+This guide dissects the underlying engineering workflows and spatial construction paradigms of next-generation models. It provides **step-by-step, zero-threshold, reproducible tutorials** for four flagship projects: **Interactive 3D Little Planet**, **Blender Scripted Landmark Reconstruction**, **Remotion Code-Driven Explainer Video**, and a **Long-running Autonomous Personal AI Wiki**.
 :::
 
 ---
