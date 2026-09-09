@@ -1,6 +1,6 @@
 ---
-title: Prompt Engineering for Generative AI (DALL-E 3 & Flux Guide)
-order: 12
+title: 12. Prompt Engineering for Generative AI (DALL-E 3 & Flux Guide)
+order: 13
 ---
 
 # 🎨 Production-Grade Prompt Engineering for Generative Vision (DALL-E 3 & Flux)

@@ -1,6 +1,6 @@
 ---
-title: AI 视觉生成提示词工程实战 (Prompt Engineering 指南)
-order: 12
+title: 12. 工业级 AI 生图提示词工程实战指南 (DALL-E 3 & Flux)
+order: 13
 ---
 
 # 🎨 工业级 AI 生图提示词工程实战指南 (DALL-E 3 & Flux)

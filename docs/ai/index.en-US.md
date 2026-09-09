@@ -26,8 +26,8 @@ graph TD
         I --> J[10. Internal Architecture Deep Dive]
     end
 
-    subgraph Vision_Engineering [Part 4: Generative Vision & Tooling]
-        K --> L[12. Production-Grade Prompt Engineering]
+    subgraph Vision_Engineering [Part 4: Generative Vision & Virtual Creation]
+        K[12. Production-Grade Prompt Engineering] --> L[13. GPT-6 Astra Virtual Creation Guide]
     end
 ```
 

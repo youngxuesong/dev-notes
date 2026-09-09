@@ -26,8 +26,8 @@ graph TD
         I --> J[10. Claude Code 内部架构剖析]
     end
 
-    subgraph Vision_Engineering [第四部分：视觉生成与提示词工程]
-        K --> L[12. 工业级 AI 生图提示词工程实战]
+    subgraph Vision_Engineering [第四部分：视觉生成与虚拟造物]
+        K[12. 工业级 AI 生图提示词工程实战] --> L[13. GPT-6 Astra 虚拟造物实战指南]
     end
 ```
 

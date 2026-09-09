@@ -1,6 +1,6 @@
 ---
-title: GPT-6 Astra 虚拟造物实战指南 (4大场景手把手复现)
-order: 13
+title: 13. GPT-6 Astra 虚拟造物实战指南 (4大场景手把手复现)
+order: 14
 ---
 
 # 🚀 GPT-6 Astra 虚拟造物实战指南：手把手复现 3D 虚拟世界、Blender 建筑与个人维基

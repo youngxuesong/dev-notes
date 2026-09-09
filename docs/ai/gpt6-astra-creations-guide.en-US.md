@@ -1,6 +1,6 @@
 ---
-title: GPT-6 Astra Virtual Creation Guide (4 Scenarios Hands-on Implementation)
-order: 13
+title: 13. GPT-6 Astra Virtual Creation Guide (4 Scenarios Hands-on Implementation)
+order: 14
 ---
 
 # 🚀 GPT-6 Astra Virtual Creation Guide: Hands-on Recreation of 3D Worlds, Blender Landmarks & Personal Wiki

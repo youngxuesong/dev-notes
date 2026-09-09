@@ -1,5 +1,6 @@
 ---
-title: Optimizing Claude API with Prompt Caching
+title: 11. Optimizing Claude API with Prompt Caching
+order: 12
 ---
 
 # Optimizing Claude API Costs & Latency with Prompt Caching
