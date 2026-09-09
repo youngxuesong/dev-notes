@@ -62,4 +62,5 @@ graph TD
 ## 🎨 Part 4: Generative Vision & Prompt Engineering
 
 - [12. Production-Grade Prompt Engineering for Generative Vision](/en-US/ai/prompt-engineering-guide)
+- [13. GPT-6 Astra Virtual Creation Guide (8 Cases & Hands-on Implementation)](/en-US/ai/gpt6-astra-creations-guide)
 - 👉 **Hands-On Utility**: Test prompt synthesis directly in the [🧰 Online Toolbox · AI Image Studio](/en-US/tools/image-studio).
